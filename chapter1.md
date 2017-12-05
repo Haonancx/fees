@@ -6,6 +6,8 @@
 
 例：my\_project\_name
 
+---
+
 ### 目录命名
 
 参照项目命名规则；
@@ -14,17 +16,23 @@
 
 例：scripts, styles, images, data\_models
 
+---
+
 ### JS文件命名
 
 参照项目命名规则。
 
 例：account\_model.js
 
+---
+
 ### CSS, SCSS文件命名
 
 参照项目命名规则。
 
 例：retina\_sprites.scss
+
+---
 
 ### HTML文件命名
 
