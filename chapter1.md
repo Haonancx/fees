@@ -30,7 +30,7 @@
 
 参照项目命名规则。
 
-例：retina\_sprites.scss
+例：retina\_sprites.scss 或者 retina\_sprites.css
 
 ---
 
