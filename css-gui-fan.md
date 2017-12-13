@@ -6,60 +6,19 @@
 * id采用驼峰式命名
 * scss中的变量、函数、混合、placeholder采用驼峰式命名
 
-**例如**
 
-`/* class */`
 
-`.element-content {`
+```css
+.element {
+    position: absolute;
+    top: 10px;
+    left: 10px;
 
-`...`
-
-`}`
-
-`  
-`
-
-`/* id */`
-
-`#myDialog {`
-
-`...`
-
-`}`
-
-`  
-`
-
-`/* 变量 */`
-
-`$colorBlack: #000;`
-
-`  
-`
-
-`/* 函数 */`
-
-`@function pxToRem($px) {`
-
-`...`
-
-`}`
-
-`/* 混合 */`
-
-`@mixin centerBlock {`
-
-`...`
-
-`}`
-
-`/* placeholder */`
-
-`%myDialog {`
-
-`...`
-
-`}`
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+}
+```
 
 ---
 
@@ -69,30 +28,19 @@
 
 颜色16进制尽量用简写。
 
-**例如**
+```css
+/* not good */
+.element {
+    color: #ABCDEF;
+    background-color: #001122;
+}
 
-`/* not good */`
-
-`.element {`
-
-`color: #ABCDEF;`
-
-`background-color: #001122;`
-
-`}`
-
-`  
-`
-
-`/* good */`
-
-`.element {`
-
-`color: #abcdef;`
-
-`background-color: #012;`
-
-`}`
+/* good */
+.element {
+    color: #abcdef;
+    background-color: #012;
+}
+```
 
 ---
 
@@ -109,32 +57,20 @@
 * `transition`
 * `animation`
 
-**例如**
+```css
+/* not good */
+.element {
+    transition: opacity 1s linear 2s;
+}
 
-`/* not good */`
-
-`.element {`
-
-`transition: opacity 1s linear 2s;`
-
-`}`
-
-`  
-`
-
-`/* good */`
-
-`.element {`
-
-`transition-delay: 2s;`
-
-`transition-timing-function: linear;`
-
-`transition-duration: 1s;`
-
-`transition-property: opacity;`
-
-`}`
+/* good */
+.element {
+    transition-delay: 2s;
+    transition-timing-function: linear;
+    transition-duration: 1s;
+    transition-property: opacity;
+}
+```
 
 ---
 
@@ -492,8 +428,6 @@ background-color: black;
 `...`
 
 `}`
-
-
 
 `.element-avatar {`
 
