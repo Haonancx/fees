@@ -312,5 +312,25 @@ if (condition) {
 var zhangsan = 'zhangsan'; // one space after code
 ```
 
+---
+
+### 多行注释
+
+最少三行, '\*'后跟一个空格，具体参照右边的写法；
+
+建议在以下情况下使用：
+
+* 难于理解的代码段
+* 可能存在错误的代码段
+* 浏览器特殊的HACK代码
+* 业务逻辑强相关的代码
+
+```js
+/*
+ * one space after '*'
+ */
+var x = 1;
+```
+
 
 
