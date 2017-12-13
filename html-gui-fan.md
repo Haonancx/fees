@@ -57,21 +57,43 @@
 
 ##### **例如**
 
-`<!DOCTYPE html>`
+`<!DOCTYPE html>`
 
-`<html lang="en-us">`
+`<html lang="en-us">`
 
-`    ...`
+`...`
+
+`</html>`
+
+### 字符编码
+
+通过声明一个明确的字符编码，让浏览器轻松、快速的确定适合网页内容的渲染方式，通常指定为'UTF-8'。
+
+##### **例如**
+
+`<!DOCTYPE html>`
+
+`<html>`
+
+`<head>`
+
+`<meta charset="UTF-8">`
+
+`</head>`
+
+`...`
 
 `</html>`
 
 
 
-### 字符编码
+### IE兼容模式
 
+用`<meta>`标签可以指定页面应该用什么版本的IE来渲染；
 
+如果你想要了解更多，请点击[这里](http://stackoverflow.com/questions/6771258/whats-the-difference-if-meta-http-equiv-x-ua-compatible-content-ie-edge-e)；
 
-通过声明一个明确的字符编码，让浏览器轻松、快速的确定适合网页内容的渲染方式，通常指定为'UTF-8'。
+不同doctype在不同浏览器下会触发不同的渲染模式（[这篇文章](https://hsivonen.fi/doctype/)总结的很到位）。
 
 ##### **例如**
 
@@ -81,13 +103,11 @@
 
 `    <head>`
 
-`        <meta charset="UTF-8">`
+`        <meta http-equiv="X-UA-Compatible" content="IE=Edge">`
 
 `    </head>`
 
 `    ...`
 
 `</html>`
-
-
 
