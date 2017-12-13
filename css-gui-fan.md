@@ -43,8 +43,7 @@
 
 `}`
 
-`  
-`
+
 
 `/* 混合 */`
 
@@ -54,14 +53,84 @@
 
 `}`
 
-`  
-`
+
 
 `/* placeholder */`
 
 `%myDialog {`
 
 `...`
+
+`}`
+
+
+
+### 颜色
+
+颜色16进制用小写字母；
+
+颜色16进制尽量用简写。
+
+**例如**
+
+`/* not good */`
+
+`.element {`
+
+`    color: #ABCDEF;`
+
+`    background-color: #001122;`
+
+`}`
+
+``
+
+`/* good */`
+
+`.element {`
+
+`    color: #abcdef;`
+
+`    background-color: #012;`
+
+`}`
+
+### 属性简写
+
+属性简写需要你非常清楚属性值的正确顺序，而且在大多数情况下并不需要设置属性简写中包含的所有值，所以建议尽量分开声明会更加清晰；
+
+`margin`和`padding`相反，需要使用简写；
+
+常见的属性简写包括：
+
+* `font`
+* `background`
+* `transition`
+* `animation`
+
+**例如**
+
+`/* not good */`
+
+`.element {`
+
+`    transition: opacity 1s linear 2s;`
+
+`}`
+
+``
+
+`/* good */`
+
+`.element {`
+
+`    transition-delay: 2s;`
+
+`    transition-timing-function: linear;`
+
+`    transition-duration: 1s;`
+
+`    transition-property: opacity;`
 
 `}`
 
@@ -400,673 +469,676 @@ url的内容要用引号；
 
 `}`
 
-
-
 ### 属性声明顺序
 
 相关的属性声明按右边的顺序做分组处理，组之间需要有一个空行。
 
 **例如**
 
-`.declaration-order {`
+`.declaration-order {`
 
-`    display: block;`
+`display: block;`
 
-`    float: right;`
+`float: right;`
 
-``
+`  
+`
 
-`    position: absolute;`
+`position: absolute;`
 
-`    top: 0;`
+`top: 0;`
 
-`    right: 0;`
+`right: 0;`
 
-`    bottom: 0;`
+`bottom: 0;`
 
-`    left: 0;`
+`left: 0;`
 
-`    z-index: 100;`
+`z-index: 100;`
 
-``
+`  
+`
 
-`    border: 1px solid #e5e5e5;`
+`border: 1px solid #e5e5e5;`
 
-`    border-radius: 3px;`
+`border-radius: 3px;`
 
-`    width: 100px;`
+`width: 100px;`
 
-`    height: 100px;`
+`height: 100px;`
 
-``
+`  
+`
 
-`    font: normal 13px "Helvetica Neue", sans-serif;`
+`font: normal 13px "Helvetica Neue", sans-serif;`
 
-`    line-height: 1.5;`
+`line-height: 1.5;`
 
-`    text-align: center;`
+`text-align: center;`
 
-``
+`  
+`
 
-`    color: #333;`
+`color: #333;`
 
-`    background-color: #f5f5f5;`
+`background-color: #f5f5f5;`
 
-``
+`  
+`
 
-`    opacity: 1;`
+`opacity: 1;`
 
-`}`
+`}`
 
-`// 下面是推荐的属性的顺序`
+`// 下面是推荐的属性的顺序`
 
-`[`
+`[`
 
-`    [`
+`[`
 
-`        "display",`
+`"display",`
 
-`        "visibility",`
+`"visibility",`
 
-`        "float",`
+`"float",`
 
-`        "clear",`
+`"clear",`
 
-`        "overflow",`
+`"overflow",`
 
-`        "overflow-x",`
+`"overflow-x",`
 
-`        "overflow-y",`
+`"overflow-y",`
 
-`        "clip",`
+`"clip",`
 
-`        "zoom"`
+`"zoom"`
 
-`    ],`
+`],`
 
-`    [`
+`[`
 
-`        "table-layout",`
+`"table-layout",`
 
-`        "empty-cells",`
+`"empty-cells",`
 
-`        "caption-side",`
+`"caption-side",`
 
-`        "border-spacing",`
+`"border-spacing",`
 
-`        "border-collapse",`
+`"border-collapse",`
 
-`        "list-style",`
+`"list-style",`
 
-`        "list-style-position",`
+`"list-style-position",`
 
-`        "list-style-type",`
+`"list-style-type",`
 
-`        "list-style-image"`
+`"list-style-image"`
 
-`    ],`
+`],`
 
-`    [`
+`[`
 
-`        "-webkit-box-orient",`
+`"-webkit-box-orient",`
 
-`        "-webkit-box-direction",`
+`"-webkit-box-direction",`
 
-`        "-webkit-box-decoration-break",`
+`"-webkit-box-decoration-break",`
 
-`        "-webkit-box-pack",`
+`"-webkit-box-pack",`
 
-`        "-webkit-box-align",`
+`"-webkit-box-align",`
 
-`        "-webkit-box-flex"`
+`"-webkit-box-flex"`
 
-`    ],`
+`],`
 
-`    [`
+`[`
 
-`        "position",`
+`"position",`
 
-`        "top",`
+`"top",`
 
-`        "right",`
+`"right",`
 
-`        "bottom",`
+`"bottom",`
 
-`        "left",`
+`"left",`
 
-`        "z-index"`
+`"z-index"`
 
-`    ],`
+`],`
 
-`    [`
+`[`
 
-`        "margin",`
+`"margin",`
 
-`        "margin-top",`
+`"margin-top",`
 
-`        "margin-right",`
+`"margin-right",`
 
-`        "margin-bottom",`
+`"margin-bottom",`
 
-`        "margin-left",`
+`"margin-left",`
 
-`        "-webkit-box-sizing",`
+`"-webkit-box-sizing",`
 
-`        "-moz-box-sizing",`
+`"-moz-box-sizing",`
 
-`        "box-sizing",`
+`"box-sizing",`
 
-`        "border",`
+`"border",`
 
-`        "border-width",`
+`"border-width",`
 
-`        "border-style",`
+`"border-style",`
 
-`        "border-color",`
+`"border-color",`
 
-`        "border-top",`
+`"border-top",`
 
-`        "border-top-width",`
+`"border-top-width",`
 
-`        "border-top-style",`
+`"border-top-style",`
 
-`        "border-top-color",`
+`"border-top-color",`
 
-`        "border-right",`
+`"border-right",`
 
-`        "border-right-width",`
+`"border-right-width",`
 
-`        "border-right-style",`
+`"border-right-style",`
 
-`        "border-right-color",`
+`"border-right-color",`
 
-`        "border-bottom",`
+`"border-bottom",`
 
-`        "border-bottom-width",`
+`"border-bottom-width",`
 
-`        "border-bottom-style",`
+`"border-bottom-style",`
 
-`        "border-bottom-color",`
+`"border-bottom-color",`
 
-`        "border-left",`
+`"border-left",`
 
-`        "border-left-width",`
+`"border-left-width",`
 
-`        "border-left-style",`
+`"border-left-style",`
 
-`        "border-left-color",`
+`"border-left-color",`
 
-`        "-webkit-border-radius",`
+`"-webkit-border-radius",`
 
-`        "-moz-border-radius",`
+`"-moz-border-radius",`
 
-`        "border-radius",`
+`"border-radius",`
 
-`        "-webkit-border-top-left-radius",`
+`"-webkit-border-top-left-radius",`
 
-`        "-moz-border-radius-topleft",`
+`"-moz-border-radius-topleft",`
 
-`        "border-top-left-radius",`
+`"border-top-left-radius",`
 
-`        "-webkit-border-top-right-radius",`
+`"-webkit-border-top-right-radius",`
 
-`        "-moz-border-radius-topright",`
+`"-moz-border-radius-topright",`
 
-`        "border-top-right-radius",`
+`"border-top-right-radius",`
 
-`        "-webkit-border-bottom-right-radius",`
+`"-webkit-border-bottom-right-radius",`
 
-`        "-moz-border-radius-bottomright",`
+`"-moz-border-radius-bottomright",`
 
-`        "border-bottom-right-radius",`
+`"border-bottom-right-radius",`
 
-`        "-webkit-border-bottom-left-radius",`
+`"-webkit-border-bottom-left-radius",`
 
-`        "-moz-border-radius-bottomleft",`
+`"-moz-border-radius-bottomleft",`
 
-`        "border-bottom-left-radius",`
+`"border-bottom-left-radius",`
 
-`        "-webkit-border-image",`
+`"-webkit-border-image",`
 
-`        "-moz-border-image",`
+`"-moz-border-image",`
 
-`        "-o-border-image",`
+`"-o-border-image",`
 
-`        "border-image",`
+`"border-image",`
 
-`        "-webkit-border-image-source",`
+`"-webkit-border-image-source",`
 
-`        "-moz-border-image-source",`
+`"-moz-border-image-source",`
 
-`        "-o-border-image-source",`
+`"-o-border-image-source",`
 
-`        "border-image-source",`
+`"border-image-source",`
 
-`        "-webkit-border-image-slice",`
+`"-webkit-border-image-slice",`
 
-`        "-moz-border-image-slice",`
+`"-moz-border-image-slice",`
 
-`        "-o-border-image-slice",`
+`"-o-border-image-slice",`
 
-`        "border-image-slice",`
+`"border-image-slice",`
 
-`        "-webkit-border-image-width",`
+`"-webkit-border-image-width",`
 
-`        "-moz-border-image-width",`
+`"-moz-border-image-width",`
 
-`        "-o-border-image-width",`
+`"-o-border-image-width",`
 
-`        "border-image-width",`
+`"border-image-width",`
 
-`        "-webkit-border-image-outset",`
+`"-webkit-border-image-outset",`
 
-`        "-moz-border-image-outset",`
+`"-moz-border-image-outset",`
 
-`        "-o-border-image-outset",`
+`"-o-border-image-outset",`
 
-`        "border-image-outset",`
+`"border-image-outset",`
 
-`        "-webkit-border-image-repeat",`
+`"-webkit-border-image-repeat",`
 
-`        "-moz-border-image-repeat",`
+`"-moz-border-image-repeat",`
 
-`        "-o-border-image-repeat",`
+`"-o-border-image-repeat",`
 
-`        "border-image-repeat",`
+`"border-image-repeat",`
 
-`        "padding",`
+`"padding",`
 
-`        "padding-top",`
+`"padding-top",`
 
-`        "padding-right",`
+`"padding-right",`
 
-`        "padding-bottom",`
+`"padding-bottom",`
 
-`        "padding-left",`
+`"padding-left",`
 
-`        "width",`
+`"width",`
 
-`        "min-width",`
+`"min-width",`
 
-`        "max-width",`
+`"max-width",`
 
-`        "height",`
+`"height",`
 
-`        "min-height",`
+`"min-height",`
 
-`        "max-height"`
+`"max-height"`
 
-`    ],`
+`],`
 
-`    [`
+`[`
 
-`        "font",`
+`"font",`
 
-`        "font-family",`
+`"font-family",`
 
-`        "font-size",`
+`"font-size",`
 
-`        "font-weight",`
+`"font-weight",`
 
-`        "font-style",`
+`"font-style",`
 
-`        "font-variant",`
+`"font-variant",`
 
-`        "font-size-adjust",`
+`"font-size-adjust",`
 
-`        "font-stretch",`
+`"font-stretch",`
 
-`        "font-effect",`
+`"font-effect",`
 
-`        "font-emphasize",`
+`"font-emphasize",`
 
-`        "font-emphasize-position",`
+`"font-emphasize-position",`
 
-`        "font-emphasize-style",`
+`"font-emphasize-style",`
 
-`        "font-smooth",`
+`"font-smooth",`
 
-`        "line-height",`
+`"line-height",`
 
-`        "text-align",`
+`"text-align",`
 
-`        "-webkit-text-align-last",`
+`"-webkit-text-align-last",`
 
-`        "-moz-text-align-last",`
+`"-moz-text-align-last",`
 
-`        "-ms-text-align-last",`
+`"-ms-text-align-last",`
 
-`        "text-align-last",`
+`"text-align-last",`
 
-`        "vertical-align",`
+`"vertical-align",`
 
-`        "white-space",`
+`"white-space",`
 
-`        "text-decoration",`
+`"text-decoration",`
 
-`        "text-emphasis",`
+`"text-emphasis",`
 
-`        "text-emphasis-color",`
+`"text-emphasis-color",`
 
-`        "text-emphasis-style",`
+`"text-emphasis-style",`
 
-`        "text-emphasis-position",`
+`"text-emphasis-position",`
 
-`        "text-indent",`
+`"text-indent",`
 
-`        "-ms-text-justify",`
+`"-ms-text-justify",`
 
-`        "text-justify",`
+`"text-justify",`
 
-`        "letter-spacing",`
+`"letter-spacing",`
 
-`        "word-spacing",`
+`"word-spacing",`
 
-`        "-ms-writing-mode",`
+`"-ms-writing-mode",`
 
-`        "text-outline",`
+`"text-outline",`
 
-`        "text-transform",`
+`"text-transform",`
 
-`        "text-wrap",`
+`"text-wrap",`
 
-`        "-ms-text-overflow",`
+`"-ms-text-overflow",`
 
-`        "text-overflow",`
+`"text-overflow",`
 
-`        "text-overflow-ellipsis",`
+`"text-overflow-ellipsis",`
 
-`        "text-overflow-mode",`
+`"text-overflow-mode",`
 
-`        "-ms-word-wrap",`
+`"-ms-word-wrap",`
 
-`        "word-wrap",`
+`"word-wrap",`
 
-`        "-ms-word-break",`
+`"-ms-word-break",`
 
-`        "word-break"`
+`"word-break"`
 
-`    ],`
+`],`
 
-`    [`
+`[`
 
-`        "color",`
+`"color",`
 
-`        "background",`
+`"background",`
 
-`        "filter:progid:DXImageTransform.Microsoft.AlphaImageLoader",`
+`"filter:progid:DXImageTransform.Microsoft.AlphaImageLoader",`
 
-`        "background-color",`
+`"background-color",`
 
-`        "background-image",`
+`"background-image",`
 
-`        "background-repeat",`
+`"background-repeat",`
 
-`        "background-attachment",`
+`"background-attachment",`
 
-`        "background-position",`
+`"background-position",`
 
-`        "-ms-background-position-x",`
+`"-ms-background-position-x",`
 
-`        "background-position-x",`
+`"background-position-x",`
 
-`        "-ms-background-position-y",`
+`"-ms-background-position-y",`
 
-`        "background-position-y",`
+`"background-position-y",`
 
-`        "-webkit-background-clip",`
+`"-webkit-background-clip",`
 
-`        "-moz-background-clip",`
+`"-moz-background-clip",`
 
-`        "background-clip",`
+`"background-clip",`
 
-`        "background-origin",`
+`"background-origin",`
 
-`        "-webkit-background-size",`
+`"-webkit-background-size",`
 
-`        "-moz-background-size",`
+`"-moz-background-size",`
 
-`        "-o-background-size",`
+`"-o-background-size",`
 
-`        "background-size"`
+`"background-size"`
 
-`    ],`
+`],`
 
-`    [`
+`[`
 
-`        "outline",`
+`"outline",`
 
-`        "outline-width",`
+`"outline-width",`
 
-`        "outline-style",`
+`"outline-style",`
 
-`        "outline-color",`
+`"outline-color",`
 
-`        "outline-offset",`
+`"outline-offset",`
 
-`        "opacity",`
+`"opacity",`
 
-`        "filter:progid:DXImageTransform.Microsoft.Alpha(Opacity",`
+`"filter:progid:DXImageTransform.Microsoft.Alpha(Opacity",`
 
-`        "-ms-filter:\\'progid:DXImageTransform.Microsoft.Alpha",`
+`"-ms-filter:\\'progid:DXImageTransform.Microsoft.Alpha",`
 
-`        "-ms-interpolation-mode",`
+`"-ms-interpolation-mode",`
 
-`        "-webkit-box-shadow",`
+`"-webkit-box-shadow",`
 
-`        "-moz-box-shadow",`
+`"-moz-box-shadow",`
 
-`        "box-shadow",`
+`"box-shadow",`
 
-`        "filter:progid:DXImageTransform.Microsoft.gradient",`
+`"filter:progid:DXImageTransform.Microsoft.gradient",`
 
-`        "-ms-filter:\\'progid:DXImageTransform.Microsoft.gradient",`
+`"-ms-filter:\\'progid:DXImageTransform.Microsoft.gradient",`
 
-`        "text-shadow"`
+`"text-shadow"`
 
-`    ],`
+`],`
 
-`    [`
+`[`
 
-`        "-webkit-transition",`
+`"-webkit-transition",`
 
-`        "-moz-transition",`
+`"-moz-transition",`
 
-`        "-ms-transition",`
+`"-ms-transition",`
 
-`        "-o-transition",`
+`"-o-transition",`
 
-`        "transition",`
+`"transition",`
 
-`        "-webkit-transition-delay",`
+`"-webkit-transition-delay",`
 
-`        "-moz-transition-delay",`
+`"-moz-transition-delay",`
 
-`        "-ms-transition-delay",`
+`"-ms-transition-delay",`
 
-`        "-o-transition-delay",`
+`"-o-transition-delay",`
 
-`        "transition-delay",`
+`"transition-delay",`
 
-`        "-webkit-transition-timing-function",`
+`"-webkit-transition-timing-function",`
 
-`        "-moz-transition-timing-function",`
+`"-moz-transition-timing-function",`
 
-`        "-ms-transition-timing-function",`
+`"-ms-transition-timing-function",`
 
-`        "-o-transition-timing-function",`
+`"-o-transition-timing-function",`
 
-`        "transition-timing-function",`
+`"transition-timing-function",`
 
-`        "-webkit-transition-duration",`
+`"-webkit-transition-duration",`
 
-`        "-moz-transition-duration",`
+`"-moz-transition-duration",`
 
-`        "-ms-transition-duration",`
+`"-ms-transition-duration",`
 
-`        "-o-transition-duration",`
+`"-o-transition-duration",`
 
-`        "transition-duration",`
+`"transition-duration",`
 
-`        "-webkit-transition-property",`
+`"-webkit-transition-property",`
 
-`        "-moz-transition-property",`
+`"-moz-transition-property",`
 
-`        "-ms-transition-property",`
+`"-ms-transition-property",`
 
-`        "-o-transition-property",`
+`"-o-transition-property",`
 
-`        "transition-property",`
+`"transition-property",`
 
-`        "-webkit-transform",`
+`"-webkit-transform",`
 
-`        "-moz-transform",`
+`"-moz-transform",`
 
-`        "-ms-transform",`
+`"-ms-transform",`
 
-`        "-o-transform",`
+`"-o-transform",`
 
-`        "transform",`
+`"transform",`
 
-`        "-webkit-transform-origin",`
+`"-webkit-transform-origin",`
 
-`        "-moz-transform-origin",`
+`"-moz-transform-origin",`
 
-`        "-ms-transform-origin",`
+`"-ms-transform-origin",`
 
-`        "-o-transform-origin",`
+`"-o-transform-origin",`
 
-`        "transform-origin",`
+`"transform-origin",`
 
-`        "-webkit-animation",`
+`"-webkit-animation",`
 
-`        "-moz-animation",`
+`"-moz-animation",`
 
-`        "-ms-animation",`
+`"-ms-animation",`
 
-`        "-o-animation",`
+`"-o-animation",`
 
-`        "animation",`
+`"animation",`
 
-`        "-webkit-animation-name",`
+`"-webkit-animation-name",`
 
-`        "-moz-animation-name",`
+`"-moz-animation-name",`
 
-`        "-ms-animation-name",`
+`"-ms-animation-name",`
 
-`        "-o-animation-name",`
+`"-o-animation-name",`
 
-`        "animation-name",`
+`"animation-name",`
 
-`        "-webkit-animation-duration",`
+`"-webkit-animation-duration",`
 
-`        "-moz-animation-duration",`
+`"-moz-animation-duration",`
 
-`        "-ms-animation-duration",`
+`"-ms-animation-duration",`
 
-`        "-o-animation-duration",`
+`"-o-animation-duration",`
 
-`        "animation-duration",`
+`"animation-duration",`
 
-`        "-webkit-animation-play-state",`
+`"-webkit-animation-play-state",`
 
-`        "-moz-animation-play-state",`
+`"-moz-animation-play-state",`
 
-`        "-ms-animation-play-state",`
+`"-ms-animation-play-state",`
 
-`        "-o-animation-play-state",`
+`"-o-animation-play-state",`
 
-`        "animation-play-state",`
+`"animation-play-state",`
 
-`        "-webkit-animation-timing-function",`
+`"-webkit-animation-timing-function",`
 
-`        "-moz-animation-timing-function",`
+`"-moz-animation-timing-function",`
 
-`        "-ms-animation-timing-function",`
+`"-ms-animation-timing-function",`
 
-`        "-o-animation-timing-function",`
+`"-o-animation-timing-function",`
 
-`        "animation-timing-function",`
+`"animation-timing-function",`
 
-`        "-webkit-animation-delay",`
+`"-webkit-animation-delay",`
 
-`        "-moz-animation-delay",`
+`"-moz-animation-delay",`
 
-`        "-ms-animation-delay",`
+`"-ms-animation-delay",`
 
-`        "-o-animation-delay",`
+`"-o-animation-delay",`
 
-`        "animation-delay",`
+`"animation-delay",`
 
-`        "-webkit-animation-iteration-count",`
+`"-webkit-animation-iteration-count",`
 
-`        "-moz-animation-iteration-count",`
+`"-moz-animation-iteration-count",`
 
-`        "-ms-animation-iteration-count",`
+`"-ms-animation-iteration-count",`
 
-`        "-o-animation-iteration-count",`
+`"-o-animation-iteration-count",`
 
-`        "animation-iteration-count",`
+`"animation-iteration-count",`
 
-`        "-webkit-animation-direction",`
+`"-webkit-animation-direction",`
 
-`        "-moz-animation-direction",`
+`"-moz-animation-direction",`
 
-`        "-ms-animation-direction",`
+`"-ms-animation-direction",`
 
-`        "-o-animation-direction",`
+`"-o-animation-direction",`
 
-`        "animation-direction"`
+`"animation-direction"`
 
-`    ],`
+`],`
 
-`    [`
+`[`
 
-`        "content",`
+`"content",`
 
-`        "quotes",`
+`"quotes",`
 
-`        "counter-reset",`
+`"counter-reset",`
 
-`        "counter-increment",`
+`"counter-increment",`
 
-`        "resize",`
+`"resize",`
 
-`        "cursor",`
+`"cursor",`
 
-`        "-webkit-user-select",`
+`"-webkit-user-select",`
 
-`        "-moz-user-select",`
+`"-moz-user-select",`
 
-`        "-ms-user-select",`
+`"-ms-user-select",`
 
-`        "user-select",`
+`"user-select",`
 
-`        "nav-index",`
+`"nav-index",`
 
-`        "nav-up",`
+`"nav-up",`
 
-`        "nav-right",`
+`"nav-right",`
 
-`        "nav-down",`
+`"nav-down",`
 
-`        "nav-left",`
+`"nav-left",`
 
-`        "-moz-tab-size",`
+`"-moz-tab-size",`
 
-`        "-o-tab-size",`
+`"-o-tab-size",`
 
-`        "tab-size",`
+`"tab-size",`
 
-`        "-webkit-hyphens",`
+`"-webkit-hyphens",`
 
-`        "-moz-hyphens",`
+`"-moz-hyphens",`
 
-`        "hyphens",`
+`"hyphens",`
 
-`        "pointer-events"`
+`"pointer-events"`
 
-`    ]`
+`]`
 
 `]`
 
