@@ -447,37 +447,40 @@ background-color: black;
 
 **例如**
 
-`.element {`
+`.element {`
 
-`    ...`
+`...`
 
-`}`
+`}`
 
-``
+`  
+`
 
-`.element-avatar{`
+`.element-avatar{`
 
-`    ...`
+`...`
 
-`}`
+`}`
 
-``
+`  
+`
 
-`@media (min-width: 480px) {`
+`@media (min-width: 480px) {`
 
-`    .element {`
+`.element {`
 
-`        ...`
+`...`
 
-`    }`
+`}`
 
-``
+`  
+`
 
-`    .element-avatar {`
+`.element-avatar {`
 
-`        ...`
+`...`
 
-`    }`
+`}`
 
 `}`
 
@@ -504,6 +507,8 @@ url的内容要用引号；
 `...`
 
 `}`
+
+
 
 ### 属性声明顺序
 
@@ -1177,4 +1182,264 @@ url的内容要用引号；
 `]`
 
 `]`
+
+### SCSS相关
+
+提交的代码中不要有`@debug`；
+
+声明顺序：
+
+* `@extend`
+* 不包含`@content`的`@include`
+* 包含`@content`的`@include`
+* 自身属性
+* 嵌套规则
+
+`@import`引入的文件不需要开头的'\_'和结尾的'.scss'；
+
+嵌套最多不能超过5层；
+
+`@extend`中使用placeholder选择器；
+
+去掉不必要的父级引用符号'&'。
+
+**例如**
+
+`/* not good */`
+
+`@import "_dialog.scss";`
+
+``
+
+`/* good */`
+
+`@import "dialog";`
+
+``
+
+`/* not good */`
+
+`.fatal {`
+
+`    @extend .error;`
+
+`}`
+
+``
+
+`/* good */`
+
+`.fatal {`
+
+`    @extend %error;`
+
+`}`
+
+``
+
+`/* not good */`
+
+`.element {`
+
+`    & > .dialog {`
+
+`        ...`
+
+`    }`
+
+`}`
+
+``
+
+`/* good */`
+
+`.element {`
+
+`    > .dialog {`
+
+`        ...`
+
+`    }`
+
+`}`
+
+
+
+### 杂项
+
+* 不允许有空的规则；
+* 元素选择器用小写字母；
+* 去掉小数点前面的0；
+* 去掉数字中不必要的小数点和末尾的0；
+* 属性值'0'后面不要加单位；
+* 同个属性不同前缀的写法需要在垂直方向保持对齐，具体参照右边的写法；
+* 无前缀的标准属性应该写在有前缀的属性后面；
+* 不要在同个规则里出现重复的属性，如果重复的属性是连续的则没关系；
+* 不要在一个文件里出现两个相同的规则；
+* 用`border: 0;`代替`border: none;`；
+* 选择器不要超过4层（在scss中如果超过4层应该考虑用嵌套的方式来写）；
+* 发布的代码中不要有`@import`；
+* 尽量少用'\*'选择器。
+
+**例如**
+
+`/* not good */`
+
+`.element {`
+
+`}`
+
+``
+
+`/* not good */`
+
+`LI {`
+
+`    ...`
+
+`}`
+
+``
+
+`/* good */`
+
+`li {`
+
+`    ...`
+
+`}`
+
+``
+
+`/* not good */`
+
+`.element {`
+
+`    color: rgba(0, 0, 0, 0.5);`
+
+`}`
+
+``
+
+`/* good */`
+
+`.element {`
+
+`    color: rgba(0, 0, 0, .5);`
+
+`}`
+
+``
+
+`/* not good */`
+
+`.element {`
+
+`    width: 50.0px;`
+
+`}`
+
+``
+
+`/* good */`
+
+`.element {`
+
+`    width: 50px;`
+
+`}`
+
+``
+
+`/* not good */`
+
+`.element {`
+
+`    width: 0px;`
+
+`}`
+
+``
+
+`/* good */`
+
+`.element {`
+
+`    width: 0;`
+
+`}`
+
+``
+
+`/* not good */`
+
+`.element {`
+
+`    border-radius: 3px;`
+
+`    -webkit-border-radius: 3px;`
+
+`    -moz-border-radius: 3px;`
+
+``
+
+`    background: linear-gradient(to bottom, #fff 0, #eee 100%);`
+
+`    background: -webkit-linear-gradient(top, #fff 0, #eee 100%);`
+
+`    background: -moz-linear-gradient(top, #fff 0, #eee 100%);`
+
+`}`
+
+``
+
+`/* good */`
+
+`.element {`
+
+`    -webkit-border-radius: 3px;`
+
+`       -moz-border-radius: 3px;`
+
+`            border-radius: 3px;`
+
+``
+
+`    background: -webkit-linear-gradient(top, #fff 0, #eee 100%);`
+
+`    background:    -moz-linear-gradient(top, #fff 0, #eee 100%);`
+
+`    background:         linear-gradient(to bottom, #fff 0, #eee 100%);`
+
+`}`
+
+``
+
+`/* not good */`
+
+`.element {`
+
+`    color: rgb(0, 0, 0);`
+
+`    width: 50px;`
+
+`    color: rgba(0, 0, 0, .5);`
+
+`}`
+
+``
+
+`/* good */`
+
+`.element {`
+
+`    color: rgb(0, 0, 0);`
+
+`    color: rgba(0, 0, 0, .5);`
+
+`}`
+
+
+
+
 
