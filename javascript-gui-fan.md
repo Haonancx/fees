@@ -217,8 +217,6 @@ if (a === null) {
 
 使用typeof和字符串'undefined'对变量进行判断。
 
-
-
 ```js
 // not good
 if (person === undefined) {
@@ -618,6 +616,188 @@ var x = "test";
 // good
 var y = 'foo',
     z = '<div id="test"></div>';
+```
+
+---
+
+### jshint
+
+用'===', '!=='代替'==', '!='；
+
+for-in里一定要有hasOwnProperty的判断；
+
+不要在内置对象的原型上添加方法，如Array, Date；
+
+不要在内层作用域的代码里声明了变量，之后却访问到了外层作用域的同名变量；
+
+变量不要先使用后声明；
+
+不要在一句代码中单单使用构造函数，记得将其赋值给某个变量；
+
+不要在同个作用域下声明同名变量；
+
+不要在一些不需要的地方加括号，例：delete\(a.b\)；
+
+不要使用未声明的变量（全局变量需要加到.jshintrc文件的globals属性里面）；
+
+不要声明了变量却不使用；
+
+不要在应该做比较的地方做赋值；
+
+debugger不要出现在提交的代码里；
+
+数组中不要存在空元素；
+
+不要在循环内部声明函数；
+
+不要像这样使用构造函数，例：`new function () { ... }`,`new Object`；
+
+
+
+```js
+// not good
+if (a == 1) {
+    a++;
+}
+
+// good
+if (a === 1) {
+    a++;
+}
+
+// good
+for (key in obj) {
+    if (obj.hasOwnProperty(key)) {
+        // be sure that obj[key] belongs to the object and was not inherited
+        console.log(obj[key]);
+    }
+}
+
+// not good
+Array.prototype.count = function(value) {
+    return 4;
+};
+
+// not good
+var x = 1;
+
+function test() {
+    if (true) {
+        var x = 0;
+    }
+
+    x += 1;
+}
+
+// not good
+function test() {
+    console.log(x);
+
+    var x = 1;
+}
+
+// not good
+new Person();
+
+// good
+var person = new Person();
+
+// not good
+delete(obj.attr);
+
+// good
+delete obj.attr;
+
+// not good
+if (a = 10) {
+    a++;
+}
+
+// not good
+var a = [1, , , 2, 3];
+
+// not good
+var nums = [];
+
+for (var i = 0; i < 10; i++) {
+    (function(i) {
+        nums[i] = function(j) {
+            return i + j;
+        };
+    }(i));
+}
+
+// not good
+var singleton = new function() {
+    var privateVar;
+
+    this.publicMethod = function() {
+        privateVar = 1;
+    };
+
+    this.publicMethod2 = function() {
+        privateVar = 2;
+    };
+};
+```
+
+---
+
+### 杂项
+
+不要混用tab和space；
+
+不要在一处使用多个tab或space；
+
+换行符统一用'LF'；
+
+对上下文this的引用只能使用'\_this', 'that', 'self'其中一个来命名；
+
+行尾不要有空白字符；
+
+switch的falling through和no default的情况一定要有注释特别说明；
+
+不允许有空的代码块。
+
+
+
+```js
+// not good
+var a   = 1;
+
+function Person() {
+    // not good
+    var me = this;
+
+    // good
+    var _this = this;
+
+    // good
+    var that = this;
+
+    // good
+    var self = this;
+}
+
+// good
+switch (condition) {
+    case 1:
+    case 2:
+        ...
+        break;
+    case 3:
+        ...
+    // why fall through
+    case 4
+        ...
+        break;
+    // why no default
+}
+
+// not good with empty block
+if (condition) {
+
+}
 ```
 
 
