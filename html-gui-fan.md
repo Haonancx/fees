@@ -109,8 +109,6 @@
 
 `</html>`
 
-
-
 ### 引入CSS, JS
 
 根据HTML5规范, 通常在引入CSS和JS时不需要指明`type`，因为`text/css`和`text/javascript`分别是他们的默认值。
@@ -123,35 +121,72 @@
 
 ##### **例如**
 
-`<!-- External CSS -->`
+`<!-- External CSS -->`
 
-`<link rel="stylesheet" href="code_guide.css">`
+`<link rel="stylesheet" href="code_guide.css">`
 
-``
 
-`<!-- In-document CSS -->`
 
-`<style>`
+`<!-- In-document CSS -->`
 
-`    ...`
+`<style>`
 
-`</style>`
+`...`
 
-``
+`</style>`
 
-`<!-- External JS -->`
 
-`<script src="code_guide.js"></script>`
 
-``
+`<!-- External JS -->`
 
-`<!-- In-document JS -->`
+`<script src="code_guide.js"></script>`
 
-`<script>`
 
-`    ...`
+
+`<!-- In-document JS -->`
+
+`<script>`
+
+`...`
 
 `</script>`
+
+
+
+
+
+### 属性顺序
+
+属性应该按照特定的顺序出现以保证易读性；
+
+* `class`
+* `id`
+* `name`
+* `data-*`
+* `src`,`for`,`type`,`href`,`value`,`max-length`,`max`,`min`,`pattern`
+* `placeholder`,`title`,`alt`
+* `aria-*`,`role`
+* `required`,`readonly`,`disabled`
+
+class是为高可复用组件设计的，所以应处在第一位；
+
+id更加具体且应该尽量少使用，所以将它放在第二位。
+
+
+
+##### **例如**
+
+
+
+`<a class="..." id="..." data-modal="toggle" href="#">Example link</a>`
+
+`<input class="form-control" type="text">`
+
+`<img src="..." alt="...">`
+
+
+
+
 
 
 
