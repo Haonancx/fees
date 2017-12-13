@@ -4,19 +4,19 @@
 
 **例如**
 
-`.element {`
+`.element {`
 
-        `position: absolute;`
+`    position: absolute;`
 
-        `top: 10px;`
+`    top: 10px;`
 
-        `left: 10px;`
+`    left: 10px;`
 
-        `border-radius: 10px;`
+`    border-radius: 10px;`
 
-        `width: 50px;`
+`    width: 50px;`
 
-        `height: 50px;`
+`    height: 50px;`
 
 `}`
 
