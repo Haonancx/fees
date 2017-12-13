@@ -46,17 +46,9 @@
 
 `var x = 1;`
 
-
-
-
-
 `/* expression statement */`
 
 `x++;`
-
-
-
-
 
 `/* do-while */`
 
@@ -65,4 +57,8 @@
 `x++;`
 
 `} while (x < 10);`
+
+---
+
+
 
