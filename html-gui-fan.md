@@ -1,5 +1,15 @@
 # HTML规范
 
+
+
+### 实用高于完美
+
+尽量遵循HTML标准和语义，但是不应该以浪费实用性作为代价；
+
+任何时候都要用尽量小的复杂度和尽量少的标签来解决问题。
+
+---
+
 ### 语法
 
 * 缩进使用soft tab（4个空格）；
@@ -93,8 +103,6 @@
 </html>
 ```
 
-
-
 ---
 
 ### 引入CSS, JS
@@ -106,8 +114,6 @@
 * [使用link](http://www.w3.org/TR/2011/WD-html5-20110525/semantics.html#the-link-element)
 * [使用style](http://www.w3.org/TR/2011/WD-html5-20110525/semantics.html#the-style-element)
 * [使用script](http://www.w3.org/TR/2011/WD-html5-20110525/scripting-1.html#the-script-element)
-
-
 
 ```html
 <!-- External CSS -->
@@ -174,8 +180,6 @@ boolean属性指不需要声明取值的属性，XHTML需要每个属性声明�
 </select>
 ```
 
-
-
 ---
 
 ### JS生成标签
@@ -198,11 +202,5 @@ boolean属性指不需要声明取值的属性，XHTML需要每个属性声明�
 <img class="avatar" src="...">
 ```
 
----
 
-### 实用高于完美
-
-尽量遵循HTML标准和语义，但是不应该以浪费实用性作为代价；
-
-任何时候都要用尽量小的复杂度和尽量少的标签来解决问题。
 
