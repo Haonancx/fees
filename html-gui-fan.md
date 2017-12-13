@@ -85,8 +85,6 @@
 
 `</html>`
 
-
-
 ### IE兼容模式
 
 用`<meta>`标签可以指定页面应该用什么版本的IE来渲染；
@@ -97,17 +95,63 @@
 
 ##### **例如**
 
-`<!DOCTYPE html>`
+`<!DOCTYPE html>`
 
-`<html>`
+`<html>`
 
-`    <head>`
+`<head>`
 
-`        <meta http-equiv="X-UA-Compatible" content="IE=Edge">`
+`<meta http-equiv="X-UA-Compatible" content="IE=Edge">`
 
-`    </head>`
+`</head>`
+
+`...`
+
+`</html>`
+
+
+
+### 引入CSS, JS
+
+根据HTML5规范, 通常在引入CSS和JS时不需要指明`type`，因为`text/css`和`text/javascript`分别是他们的默认值。
+
+#### HTML5 规范链接
+
+* [使用link](http://www.w3.org/TR/2011/WD-html5-20110525/semantics.html#the-link-element)
+* [使用style](http://www.w3.org/TR/2011/WD-html5-20110525/semantics.html#the-style-element)
+* [使用script](http://www.w3.org/TR/2011/WD-html5-20110525/scripting-1.html#the-script-element)
+
+##### **例如**
+
+`<!-- External CSS -->`
+
+`<link rel="stylesheet" href="code_guide.css">`
+
+``
+
+`<!-- In-document CSS -->`
+
+`<style>`
 
 `    ...`
 
-`</html>`
+`</style>`
+
+``
+
+`<!-- External JS -->`
+
+`<script src="code_guide.js"></script>`
+
+``
+
+`<!-- In-document JS -->`
+
+`<script>`
+
+`    ...`
+
+`</script>`
+
+
 
