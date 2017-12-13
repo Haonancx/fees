@@ -159,7 +159,7 @@ var a = {
 
 下列关键字后必须有大括号（即使代码块的内容只有一行）：`if`,`else`,`for`,`while`,`do`,`switch`,`try`,`catch`,`finally`,`with`。
 
-```
+```js
 // not good
 if (condition)
     doSomething();
@@ -186,7 +186,7 @@ if (condition) {
 * 不要用null来判断函数调用时有无传参
 * 不要与未初始化的变量做比较
 
-```
+```js
 // not good
 function test(a, b) {
     if (b === null) {
@@ -219,9 +219,17 @@ if (a === null) {
 
 
 
+```js
+// not good
+if (person === undefined) {
+    ...
+}
 
-
-
+// good
+if (typeof person === 'undefined') {
+    ...
+}
+```
 
 ---
 
