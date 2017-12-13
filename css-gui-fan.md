@@ -311,8 +311,6 @@ background-color: black;
 
 `}`
 
-
-
 ### 引号
 
 最外层统一使用双引号；
@@ -323,19 +321,17 @@ url的内容要用引号；
 
 **例如**
 
-`.element:after {`
+`.element:after {`
 
-`    content: "";`
+`content: "";`
 
-`    background-image: url("logo.png");`
+`background-image: url("logo.png");`
 
-`}`
+`}`
 
-``
+`li[data-type="single"] {`
 
-`li[data-type="single"] {`
-
-`    ...`
+`...`
 
 `}`
 
