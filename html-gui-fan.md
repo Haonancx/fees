@@ -63,21 +63,15 @@
 
 通过声明一个明确的字符编码，让浏览器轻松、快速的确定适合网页内容的渲染方式，通常指定为'UTF-8'。
 
-##### **例如**
-
-`<!DOCTYPE html>`
-
-`<html>`
-
-`<head>`
-
-`<meta charset="UTF-8">`
-
-`</head>`
-
-`...`
-
-`</html>`
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    ...
+</html>
+```
 
 ---
 
@@ -89,21 +83,17 @@
 
 不同doctype在不同浏览器下会触发不同的渲染模式（[这篇文章](https://hsivonen.fi/doctype/)总结的很到位）。
 
-##### **例如**
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    </head>
+    ...
+</html>
+```
 
-`<!DOCTYPE html>`
 
-`<html>`
-
-`<head>`
-
-`<meta http-equiv="X-UA-Compatible" content="IE=Edge">`
-
-`</head>`
-
-`...`
-
-`</html>`
 
 ---
 
@@ -117,31 +107,25 @@
 * [使用style](http://www.w3.org/TR/2011/WD-html5-20110525/semantics.html#the-style-element)
 * [使用script](http://www.w3.org/TR/2011/WD-html5-20110525/scripting-1.html#the-script-element)
 
-##### **例如**
 
-`<!-- External CSS -->`
 
-`<link rel="stylesheet" href="code_guide.css">`
+```html
+<!-- External CSS -->
+<link rel="stylesheet" href="code_guide.css">
 
-`<!-- In-document CSS -->`
+<!-- In-document CSS -->
+<style>
+    ...
+</style>
 
-`<style>`
+<!-- External JS -->
+<script src="code_guide.js"></script>
 
-`...`
-
-`</style>`
-
-`<!-- External JS -->`
-
-`<script src="code_guide.js"></script>`
-
-`<!-- In-document JS -->`
-
-`<script>`
-
-`...`
-
-`</script>`
+<!-- In-document JS -->
+<script>
+    ...
+</script>
+```
 
 ---
 
@@ -162,13 +146,13 @@ class是为高可复用组件设计的，所以应处在第一位；
 
 id更加具体且应该尽量少使用，所以将它放在第二位。
 
-##### **例如**
+```html
+<a class="..." id="..." data-modal="toggle" href="#">Example link</a>
 
-`<a class="..." id="..." data-modal="toggle" href="#">Example link</a>`
+<input class="form-control" type="text">
 
-`<input class="form-control" type="text">`
-
-`<img src="..." alt="...">`
+<img src="..." alt="...">
+```
 
 ---
 
@@ -180,19 +164,17 @@ boolean属性指不需要声明取值的属性，XHTML需要每个属性声明�
 
 > boolean属性的存在表示取值为true，不存在则表示取值为false。
 
-##### **例如**
+```html
+<input type="text" disabled>
 
-&lt;input type="text" disabled&gt;
+<input type="checkbox" value="1" checked>
 
-&lt;input type="checkbox" value="1" checked&gt;
-
-&lt;select&gt;
-
-```
-&lt;option value="1" selected&gt;1&lt;/option&gt;
+<select>
+    <option value="1" selected>1</option>
+</select>
 ```
 
-&lt;/select&gt;
+
 
 ---
 
@@ -206,19 +188,15 @@ boolean属性指不需要声明取值的属性，XHTML需要每个属性声明�
 
 在编写HTML代码时，需要尽量避免多余的父节点；很多时候，需要通过迭代和重构来使 HTML 变得更少。
 
-##### **例如**
+```html
+<!-- Not well -->
+<span class="avatar">
+    <img src="...">
+</span>
 
-`<!-- Not well -->`
-
-`<span class="avatar">`
-
-`<img src="...">`
-
-`</span>`
-
-`<!-- Better -->`
-
-`<img class="avatar" src="...">`
+<!-- Better -->
+<img class="avatar" src="...">
+```
 
 ---
 
