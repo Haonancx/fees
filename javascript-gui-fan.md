@@ -42,23 +42,23 @@
 
 **例如**
 
-`/* var declaration */`
+`/* var declaration */`
 
-`var x = 1;`
+`var x = 1;`
 
-``
 
-`/* expression statement */`
 
-`x++;`
+`/* expression statement */`
 
-``
+`x++;`
 
-`/* do-while */`
 
-`do {`
 
-`    x++;`
+`/* do-while */`
+
+`do {`
+
+`x++;`
 
 `} while (x < 10);`
 
