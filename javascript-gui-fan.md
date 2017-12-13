@@ -123,8 +123,6 @@ var doSomething = function(a, b, c) {
 };
 ```
 
-
-
 ---
 
 ### 数组、对象
@@ -157,7 +155,26 @@ var a = {
 
 ---
 
-### 
+### 括号
+
+下列关键字后必须有大括号（即使代码块的内容只有一行）：`if`,`else`,`for`,`while`,`do`,`switch`,`try`,`catch`,`finally`,`with`。
+
+
+
+```
+// not good
+if (condition)
+    doSomething();
+
+// good
+if (condition) {
+    doSomething();
+}
+```
+
+
+
+---
 
 ### 缩进
 
