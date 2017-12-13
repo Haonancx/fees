@@ -9,25 +9,25 @@
 
 
 
-`<!DOCTYPE html>`
+##### **例如**
 
-`<html>`
+`<!DOCTYPE html>`
 
-` <head>`
+`<html>`
 
-`        <title>Page title</title>`
+`<head>`
 
-`    </head>`
+`<title>Page title</title>`
 
-`    <body>`
+`</head>`
 
-`        <img src="images/company_logo.png" alt="Company"/>`
+`<body>`
 
-`        <h1 class="hello-world">Hello, world!</h1>`
+`<img src="images/company_logo.png" alt="Company"/>`
 
-`    </body>`
+`<h1 class="hello-world">Hello, world!</h1>`
+
+`</body>`
 
 `</html>`
-
-
 
