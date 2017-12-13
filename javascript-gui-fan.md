@@ -38,6 +38,38 @@ var $body = $('body');
 
 ---
 
+### 
+
+### 变量声明
+
+一个函数作用域中所有的变量声明尽量提到函数首部，用一个var声明，不允许出现两个连续的var声明。
+
+
+
+```js
+function doSomethingWithItems(items) {
+    // use one var
+    var value = 10,
+        result = value + 10,
+        i,
+        len;
+
+    for (i = 0, len = items.length; i < len; i++) {
+        result += 10;
+    }
+}
+```
+
+### 
+
+---
+
+### 
+
+### 
+
+
+
 ### 缩进
 
 使用 soft tab（4个空格）。
