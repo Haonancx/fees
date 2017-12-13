@@ -23,8 +23,6 @@
 </html>
 ```
 
-
-
 ---
 
 ### HTML5 doctype
@@ -33,12 +31,12 @@
 
 虽然 doctype 不区分大小写，但是按照惯例，doctype 大写 （[关于html属性，大写还是小写](http://stackoverflow.com/questions/15594877/is-there-any-benefits-to-use-uppercase-or-lowercase-letters-with-html5-tagname)）。
 
-##### **例如**
+
 
 ```html
 <!DOCTYPE html>
 <html>
-	...
+    ...
 </html>
 ```
 
