@@ -328,120 +328,70 @@
 
 **例如**
 
-`// not good`
+```js
+// not good
+var a = {
+b: 1
+, c: 2
+};
 
-`var a = {`
 
-`b: 1`
+x = y
+? 1 : 2;
 
-`, c: 2`
 
-`};`
+// good
+var a = {
+b: 1,
+c: 2
+};
 
-`  
-`
 
-`x = y`
+x = y ? 1 : 2;
+x = y ?
+1 : 2;
 
-`? 1 : 2;`
 
-`  
-`
+// no need line break with 'else', 'catch', 'finally'
+if (condition) {
+...
+} else {
+...
+}
 
-`// good`
 
-`var a = {`
+try {
+...
+} catch (e) {
+...
+} finally {
+...
+}
 
-`b: 1,`
 
-`c: 2`
+// not good
+function test()
+{
+...
+}
 
-`};`
 
-`  
-`
+// good
+function test() {
+...
+}
 
-`x = y ? 1 : 2;`
 
-`x = y ?`
+// not good
+var a, foo = 7, b,
+c, bar = 8;
 
-`1 : 2;`
 
-`  
-`
-
-`// no need line break with 'else', 'catch', 'finally'`
-
-`if (condition) {`
-
-`...`
-
-`} else {`
-
-`...`
-
-`}`
-
-`  
-`
-
-`try {`
-
-`...`
-
-`} catch (e) {`
-
-`...`
-
-`} finally {`
-
-`...`
-
-`}`
-
-`  
-`
-
-`// not good`
-
-`function test()`
-
-`{`
-
-`...`
-
-`}`
-
-`  
-`
-
-`// good`
-
-`function test() {`
-
-`...`
-
-`}`
-
-`  
-`
-
-`// not good`
-
-`var a, foo = 7, b,`
-
-`c, bar = 8;`
-
-`  
-`
-
-`// good`
-
-`var a,`
-
-`foo = 7,`
-
-`b, c, bar = 8;`
+// good
+var a,
+foo = 7,
+b, c, bar = 8;
+```
 
 ---
 
@@ -454,8 +404,6 @@
 可位于一个代码行的末尾，与代码间隔一个空格。
 
 **例如**
-
-
 
 ```js
 if (condition) {
