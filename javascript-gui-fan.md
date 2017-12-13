@@ -44,8 +44,6 @@ var $body = $('body');
 
 一个函数作用域中所有的变量声明尽量提到函数首部，用一个var声明，不允许出现两个连续的var声明。
 
-
-
 ```js
 function doSomethingWithItems(items) {
     // use one var
@@ -66,9 +64,100 @@ function doSomethingWithItems(items) {
 
 ### 
 
+### 函数
+
+无论是函数声明还是函数表达式，'\('前不要空格，但'{'前一定要有空格；
+
+函数调用括号前不需要空格；
+
+立即执行函数外必须包一层括号；
+
+不要给inline function命名；
+
+参数之间用', '分隔，注意逗号后有一个空格。
+
+```js
+// no space before '(', but one space before'{'
+var doSomething = function(item) {
+    // do something
+};
+
+function doSomething(item) {
+    // do something
+}
+
+// not good
+doSomething (item);
+
+// good
+doSomething(item);
+
+// requires parentheses around immediately invoked function expressions
+(function() {
+    return 1;
+})();
+
+// not good
+[1, 2].forEach(function x() {
+    ...
+});
+
+// good
+[1, 2].forEach(function() {
+    ...
+});
+
+// not good
+var a = [1, 2, function a() {
+    ...
+}];
+
+// good
+var a = [1, 2, function() {
+    ...
+}];
+
+// use ', ' between function parameters
+var doSomething = function(a, b, c) {
+    // do something
+};
+```
+
+
+
+---
+
+### 数组、对象
+
+对象属性名不需要加引号；
+
+对象以缩进的形式书写，不要写在一行；
+
+数组、对象最后不要有逗号。
+
+```js
+// not good
+var a = {
+    'b': 1
+};
+
+var a = {b: 1};
+
+var a = {
+    b: 1,
+    c: 2,
+};
+
+// good
+var a = {
+    b: 1,
+    c: 2
+};
+```
+
+---
+
 ### 
-
-
 
 ### 缩进
 
