@@ -328,109 +328,122 @@
 
 **例如**
 
-`// not good`
+`// not good`
 
-`var a = {`
+`var a = {`
 
-`    b: 1`
+`b: 1`
 
-`    , c: 2`
+`, c: 2`
 
-`};`
+`};`
 
-``
+`  
+`
 
-`x = y`
+`x = y`
 
-`    ? 1 : 2;`
+`? 1 : 2;`
 
-``
+`  
+`
 
-`// good`
+`// good`
 
-`var a = {`
+`var a = {`
 
-`    b: 1,`
+`b: 1,`
 
-`    c: 2`
+`c: 2`
 
-`};`
+`};`
 
-``
+`  
+`
 
-`x = y ? 1 : 2;`
+`x = y ? 1 : 2;`
 
-`x = y ?`
+`x = y ?`
 
-`    1 : 2;`
+`1 : 2;`
 
-``
+`  
+`
 
-`// no need line break with 'else', 'catch', 'finally'`
+`// no need line break with 'else', 'catch', 'finally'`
 
-`if (condition) {`
+`if (condition) {`
 
-`    ...`
+`...`
 
-`} else {`
+`} else {`
 
-`    ...`
+`...`
 
-`}`
+`}`
 
-``
+`  
+`
 
-`try {`
+`try {`
 
-`    ...`
+`...`
 
-`} catch (e) {`
+`} catch (e) {`
 
-`    ...`
+`...`
 
-`} finally {`
+`} finally {`
 
-`    ...`
+`...`
 
-`}`
+`}`
 
-``
+`  
+`
 
-`// not good`
+`// not good`
 
-`function test()`
+`function test()`
 
-`{`
+`{`
 
-`    ...`
+`...`
 
-`}`
+`}`
 
-``
+`  
+`
 
-`// good`
+`// good`
 
-`function test() {`
+`function test() {`
 
-`    ...`
+`...`
 
-`}`
+`}`
 
-``
+`  
+`
 
-`// not good`
+`// not good`
 
-`var a, foo = 7, b,`
+`var a, foo = 7, b,`
 
-`    c, bar = 8;`
+`c, bar = 8;`
 
-``
+`  
+`
 
-`// good`
+`// good`
 
-`var a,`
+`var a,`
 
-`    foo = 7,`
+`foo = 7,`
 
-`    b, c, bar = 8;`
+`b, c, bar = 8;`
+
+
+
+---
 
