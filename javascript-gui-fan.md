@@ -6,19 +6,15 @@
 
 **例如**
 
-`var x = 1,`
-
-`y = 1;`
-
-`if (x < y) {`
-
-`x += 10;`
-
-`} else {`
-
-`x += 1;`
-
-`}`
+```js
+var x = 1,
+y = 1;
+if (x < y) {
+x += 10;
+} else {
+x += 1;
+}
+```
 
 ---
 
@@ -42,21 +38,16 @@
 
 **例如**
 
-`/* var declaration */`
-
-`var x = 1;`
-
-`/* expression statement */`
-
-`x++;`
-
-`/* do-while */`
-
-`do {`
-
-`x++;`
-
-`} while (x < 10);`
+```js
+/* var declaration */
+var x = 1;
+/* expression statement */
+x++;
+/* do-while */
+do {
+x++;
+} while (x < 10);
+```
 
 ---
 
@@ -88,81 +79,46 @@
 
 **例如**
 
-`// not good`
-
-`var a = {`
-
-`b :1`
-
-`};`
-
-`// good`
-
-`var a = {`
-
-`b: 1`
-
-`};`
-
-`// not good`
-
-`++ x;`
-
-`y ++;`
-
-`z = x?1:2;`
-
-`// good`
-
-`++x;`
-
-`y++;`
-
-`z = x ? 1 : 2;`
-
-`// not good`
-
-`var a = [ 1, 2 ];`
-
-`// good`
-
-`var a = [1, 2];`
-
-`// not good`
-
-`var a = ( 1+2 )*3;`
-
-`// good`
-
-`var a = (1 + 2) * 3;`
-
-`// no space before '(', one space before '{', one space between function parameters`
-
-`var doSomething = function(a, b, c) {`
-
-`// do something`
-
-`};`
-
-`// no space before '('`
-
-`doSomething(item);`
-
-`// not good`
-
-`for(i=0;i<6;i++){`
-
-`x++;`
-
-`}`
-
-`// good`
-
-`for (i = 0; i < 6; i++) {`
-
-`x++;`
-
-`}`
+```js
+// not good
+var a = {
+b :1
+};
+// good
+var a = {
+b: 1
+};
+// not good
+++ x;
+y ++;
+z = x?1:2;
+// good
+++x;
+y++;
+z = x ? 1 : 2;
+// not good
+var a = [ 1, 2 ];
+// good
+var a = [1, 2];
+// not good
+var a = ( 1+2 )*3;
+// good
+var a = (1 + 2) * 3;
+// no space before '(', one space before '{', one space between function parameters
+var doSomething = function(a, b, c) {
+// do something
+};
+// no space before '('
+doSomething(item);
+// not good
+for(i=0;i<6;i++){
+x++;
+}
+// good
+for (i = 0; i < 6; i++) {
+x++;
+}
+```
 
 ---
 
@@ -177,138 +133,80 @@
 
 **例如**
 
-`// need blank line after variable declaration`
+```js
+// need blank line after variable declaration
+var x = 1;
 
-`var x = 1;`
 
-`  
-`
+// not need blank line when variable declaration is last expression in the current block
+if (x >= 1) {
+var y = x + 1;
+}
 
-`// not need blank line when variable declaration is last expression in the current block`
 
-`if (x >= 1) {`
+var a = 2;
 
-`var y = x + 1;`
 
-`}`
+// need blank line before line comment
+a++;
 
-`  
-`
 
-`var a = 2;`
+function b() {
+// not need blank line when comment is first line of block
+return a;
+}
 
-`  
-`
 
-`// need blank line before line comment`
+// need blank line after blocks
+for (var i = 0; i < 2; i++) {
+if (true) {
+return false;
+}
 
-`a++;`
 
-`  
-`
+continue;
+}
 
-`function b() {`
 
-`// not need blank line when comment is first line of block`
+var obj = {
+foo: function() {
+return 1;
+},
 
-`return a;`
 
-`}`
+bar: function() {
+return 2;
+}
+};
 
-`  
-`
 
-`// need blank line after blocks`
+// not need blank line when in argument list, array, object
+func(
+2,
+function() {
+a++;
+},
+3
+);
 
-`for (var i = 0; i < 2; i++) {`
 
-`if (true) {`
+var foo = [
+2,
+function() {
+a++;
+},
+3
+];
 
-`return false;`
 
-`}`
-
-`  
-`
-
-`continue;`
-
-`}`
-
-`  
-`
-
-`var obj = {`
-
-`foo: function() {`
-
-`return 1;`
-
-`},`
-
-`  
-`
-
-`bar: function() {`
-
-`return 2;`
-
-`}`
-
-`};`
-
-`  
-`
-
-`// not need blank line when in argument list, array, object`
-
-`func(`
-
-`2,`
-
-`function() {`
-
-`a++;`
-
-`},`
-
-`3`
-
-`);`
-
-`  
-`
-
-`var foo = [`
-
-`2,`
-
-`function() {`
-
-`a++;`
-
-`},`
-
-`3`
-
-`];`
-
-`  
-`
-
-`var foo = {`
-
-`a: 2,`
-
-`b: function() {`
-
-`a++;`
-
-`},`
-
-`c: 3`
-
-`};`
+var foo = {
+a: 2,
+b: function() {
+a++;
+},
+c: 3
+};
+```
 
 ---
 
