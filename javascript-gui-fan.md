@@ -88,103 +88,242 @@
 
 **例如**
 
+`// not good`
+
+`var a = {`
+
+`b :1`
+
+`};`
 
 
-`// not good`
 
-`var a = {`
+`// good`
 
-`    b :1`
+`var a = {`
 
-`};`
+`b: 1`
+
+`};`
+
+
+
+`// not good`
+
+`++ x;`
+
+`y ++;`
+
+`z = x?1:2;`
+
+
+
+`// good`
+
+`++x;`
+
+`y++;`
+
+`z = x ? 1 : 2;`
+
+
+
+`// not good`
+
+`var a = [ 1, 2 ];`
+
+
+
+`// good`
+
+`var a = [1, 2];  
+`
+
+`// not good`
+
+`var a = ( 1+2 )*3;`
+
+
+
+`// good`
+
+`var a = (1 + 2) * 3;`
+
+
+
+`// no space before '(', one space before '{', one space between function parameters`
+
+`var doSomething = function(a, b, c) {`
+
+`// do something`
+
+`};  
+`
+
+`// no space before '('`
+
+`doSomething(item);`
+
+
+
+`// not good`
+
+`for(i=0;i<6;i++){`
+
+`x++;`
+
+`}`
+
+
+
+`// good`
+
+`for (i = 0; i < 6; i++) {`
+
+`x++;`
+
+`}`
+
+---
+
+### 空行
+
+以下几种情况需要空行：
+
+* 变量声明后（当变量声明在代码块的最后一行时，则无需空行）
+* 注释前（当注释在代码块的第一行时，则无需空行）
+* 代码块后（在函数调用、数组、对象中则无需空行）
+* 文件最后保留一个空行
+
+
+
+**例如**
+
+`// need blank line after variable declaration`
+
+`var x = 1;`
 
 ``
 
-`// good`
+`// not need blank line when variable declaration is last expression in the current block`
 
-`var a = {`
+`if (x >= 1) {`
 
-`    b: 1`
-
-`};`
-
-``
-
-`// not good`
-
-`++ x;`
-
-`y ++;`
-
-`z = x?1:2;`
-
-``
-
-`// good`
-
-`++x;`
-
-`y++;`
-
-`z = x ? 1 : 2;`
-
-``
-
-`// not good`
-
-`var a = [ 1, 2 ];`
-
-``
-
-`// good`
-
-`var a = [1, 2];`
-
-``
-
-`// not good`
-
-`var a = ( 1+2 )*3;`
-
-``
-
-`// good`
-
-`var a = (1 + 2) * 3;`
-
-``
-
-`// no space before '(', one space before '{', one space between function parameters`
-
-`var doSomething = function(a, b, c) {`
-
-`    // do something`
-
-`};`
-
-``
-
-`// no space before '('`
-
-`doSomething(item);`
-
-``
-
-`// not good`
-
-`for(i=0;i<6;i++){`
-
-`    x++;`
+`    var y = x + 1;`
 
 `}`
 
 ``
 
-`// good`
+`var a = 2;`
 
-`for (i = 0; i < 6; i++) {`
+``
 
-`    x++;`
+`// need blank line before line comment`
 
-`}`
+`a++;`
+
+``
+
+`function b() {`
+
+`    // not need blank line when comment is first line of block`
+
+`    return a;`
+
+`}`
+
+``
+
+`// need blank line after blocks`
+
+`for (var i = 0; i < 2; i++) {`
+
+`    if (true) {`
+
+`        return false;`
+
+`    }`
+
+``
+
+`    continue;`
+
+`}`
+
+``
+
+`var obj = {`
+
+`    foo: function() {`
+
+`        return 1;`
+
+`    },`
+
+``
+
+`    bar: function() {`
+
+`        return 2;`
+
+`    }`
+
+`};`
+
+``
+
+`// not need blank line when in argument list, array, object`
+
+`func(`
+
+`    2,`
+
+`    function() {`
+
+`        a++;`
+
+`    },`
+
+`    3`
+
+`);`
+
+``
+
+`var foo = [`
+
+`    2,`
+
+`    function() {`
+
+`        a++;`
+
+`    },`
+
+`    3`
+
+`];`
+
+``
+
+`var foo = {`
+
+`    a: 2,`
+
+`    b: function() {`
+
+`        a++;`
+
+`    },`
+
+`    c: 3`
+
+`};`
+
+
+
+---
+
+
 
