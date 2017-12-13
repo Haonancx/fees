@@ -1,5 +1,43 @@
 # JavaScript 规范
 
+### 变量命名
+
+标准变量采用驼峰式命名（除了对象的属性外，主要是考虑到cgi返回的数据）
+
+* 'ID'在变量名中全大写
+* 'URL'在变量名中全大写
+* 'Android'在变量名中大写第一个字母
+* 'iOS'在变量名中小写第一个，大写后两个字母
+* 常量全大写，用下划线连接
+* 构造函数，大写第一个字母
+* jquery对象必须以'$'开头命名
+
+```js
+var thisIsMyName;
+
+var goodID;
+
+var reportURL;
+
+var AndroidVersion;
+
+var iOSVersion;
+
+var MAX_COUNT = 10;
+
+function Person(name) {
+    this.name = name;
+}
+
+// not good
+var body = $('body');
+
+// good
+var $body = $('body');
+```
+
+
+
 ### 缩进
 
 使用 soft tab（4个空格）。
@@ -333,6 +371,53 @@ var x = 1;
 ```
 
 ---
+
+### 文档注释
+
+各类标签@param, @method等请参考[usejsdoc](http://usejsdoc.org/)和[JSDoc Guide](http://yuri4ever.github.io/jsdoc/)；
+
+建议在以下情况下使用：
+
+* 所有常量
+* 所有函数
+* 所有类
+
+```js
+/**
+ * @func
+ * @desc 一个带参数的函数
+ * @param {string} a - 参数a
+ * @param {number} b=1 - 参数b默认值为1
+ * @param {string} c=1 - 参数c有两种支持的取值</br>1—表示x</br>2—表示xx
+ * @param {object} d - 参数d为一个对象
+ * @param {string} d.e - 参数d的e属性
+ * @param {string} d.f - 参数d的f属性
+ * @param {object[]} g - 参数g为一个对象数组
+ * @param {string} g.h - 参数g数组中一项的h属性
+ * @param {string} g.i - 参数g数组中一项的i属性
+ * @param {string} [j] - 参数j是一个可选参数
+ */
+function foo(a, b, c, d, g, j) {
+    ...
+}
+```
+
+---
+
+### 引号
+
+最外层统一使用单引号。
+
+
+
+```js
+// not good
+var x = "test";
+
+// good
+var y = 'foo',
+    z = '<div id="test"></div>';
+```
 
 
 
