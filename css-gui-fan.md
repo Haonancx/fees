@@ -43,8 +43,6 @@
 
 `}`
 
-
-
 `/* 混合 */`
 
 `@mixin centerBlock {`
@@ -52,8 +50,6 @@
 `...`
 
 `}`
-
-
 
 `/* placeholder */`
 
@@ -63,8 +59,6 @@
 
 `}`
 
-
-
 ### 颜色
 
 颜色16进制用小写字母；
@@ -73,25 +67,26 @@
 
 **例如**
 
-`/* not good */`
+`/* not good */`
 
-`.element {`
+`.element {`
 
-`    color: #ABCDEF;`
+`color: #ABCDEF;`
 
-`    background-color: #001122;`
+`background-color: #001122;`
 
-`}`
+`}`
 
-``
+`  
+`
 
-`/* good */`
+`/* good */`
 
-`.element {`
+`.element {`
 
-`    color: #abcdef;`
+`color: #abcdef;`
 
-`    background-color: #012;`
+`background-color: #012;`
 
 `}`
 
@@ -110,27 +105,28 @@
 
 **例如**
 
-`/* not good */`
+`/* not good */`
 
-`.element {`
+`.element {`
 
-`    transition: opacity 1s linear 2s;`
+`transition: opacity 1s linear 2s;`
 
-`}`
+`}`
 
-``
+`  
+`
 
-`/* good */`
+`/* good */`
 
-`.element {`
+`.element {`
 
-`    transition-delay: 2s;`
+`transition-delay: 2s;`
 
-`    transition-timing-function: linear;`
+`transition-timing-function: linear;`
 
-`    transition-duration: 1s;`
+`transition-duration: 1s;`
 
-`    transition-property: opacity;`
+`transition-property: opacity;`
 
 `}`
 
@@ -442,6 +438,46 @@ background-color: black;
 `width: 50px;`
 
 `color: red; /* color red */`
+
+`}`
+
+### 媒体查询
+
+尽量将媒体查询的规则靠近与他们相关的规则，不要将他们一起放到一个独立的样式文件中，或者丢在文档的最底部，这样做只会让大家以后更容易忘记他们。
+
+**例如**
+
+`.element {`
+
+`    ...`
+
+`}`
+
+``
+
+`.element-avatar{`
+
+`    ...`
+
+`}`
+
+``
+
+`@media (min-width: 480px) {`
+
+`    .element {`
+
+`        ...`
+
+`    }`
+
+``
+
+`    .element-avatar {`
+
+`        ...`
+
+`    }`
 
 `}`
 
