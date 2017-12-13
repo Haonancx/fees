@@ -96,8 +96,6 @@
 
 `};`
 
-
-
 `// good`
 
 `var a = {`
@@ -105,8 +103,6 @@
 `b: 1`
 
 `};`
-
-
 
 `// not good`
 
@@ -116,8 +112,6 @@
 
 `z = x?1:2;`
 
-
-
 `// good`
 
 `++x;`
@@ -126,30 +120,21 @@
 
 `z = x ? 1 : 2;`
 
-
-
 `// not good`
 
 `var a = [ 1, 2 ];`
 
-
-
 `// good`
 
-`var a = [1, 2];  
-`
+`var a = [1, 2];`
 
 `// not good`
 
 `var a = ( 1+2 )*3;`
 
-
-
 `// good`
 
 `var a = (1 + 2) * 3;`
-
-
 
 `// no space before '(', one space before '{', one space between function parameters`
 
@@ -157,14 +142,11 @@
 
 `// do something`
 
-`};  
-`
+`};`
 
 `// no space before '('`
 
 `doSomething(item);`
-
-
 
 `// not good`
 
@@ -173,8 +155,6 @@
 `x++;`
 
 `}`
-
-
 
 `// good`
 
@@ -195,135 +175,262 @@
 * 代码块后（在函数调用、数组、对象中则无需空行）
 * 文件最后保留一个空行
 
+**例如**
 
+`// need blank line after variable declaration`
+
+`var x = 1;`
+
+`  
+`
+
+`// not need blank line when variable declaration is last expression in the current block`
+
+`if (x >= 1) {`
+
+`var y = x + 1;`
+
+`}`
+
+`  
+`
+
+`var a = 2;`
+
+`  
+`
+
+`// need blank line before line comment`
+
+`a++;`
+
+`  
+`
+
+`function b() {`
+
+`// not need blank line when comment is first line of block`
+
+`return a;`
+
+`}`
+
+`  
+`
+
+`// need blank line after blocks`
+
+`for (var i = 0; i < 2; i++) {`
+
+`if (true) {`
+
+`return false;`
+
+`}`
+
+`  
+`
+
+`continue;`
+
+`}`
+
+`  
+`
+
+`var obj = {`
+
+`foo: function() {`
+
+`return 1;`
+
+`},`
+
+`  
+`
+
+`bar: function() {`
+
+`return 2;`
+
+`}`
+
+`};`
+
+`  
+`
+
+`// not need blank line when in argument list, array, object`
+
+`func(`
+
+`2,`
+
+`function() {`
+
+`a++;`
+
+`},`
+
+`3`
+
+`);`
+
+`  
+`
+
+`var foo = [`
+
+`2,`
+
+`function() {`
+
+`a++;`
+
+`},`
+
+`3`
+
+`];`
+
+`  
+`
+
+`var foo = {`
+
+`a: 2,`
+
+`b: function() {`
+
+`a++;`
+
+`},`
+
+`c: 3`
+
+`};`
+
+---
+
+### 换行
+
+换行的地方，行末必须有','或者运算符；
+
+以下几种情况不需要换行：
+
+* 下列关键字后：`else`,`catch`,`finally`
+* 代码块'{'前
+
+以下几种情况需要换行：
+
+* 代码块'{'后和'}'前
+* 变量赋值后
 
 **例如**
 
-`// need blank line after variable declaration`
+`// not good`
 
-`var x = 1;`
+`var a = {`
 
-``
+`    b: 1`
 
-`// not need blank line when variable declaration is last expression in the current block`
-
-`if (x >= 1) {`
-
-`    var y = x + 1;`
-
-`}`
-
-``
-
-`var a = 2;`
-
-``
-
-`// need blank line before line comment`
-
-`a++;`
-
-``
-
-`function b() {`
-
-`    // not need blank line when comment is first line of block`
-
-`    return a;`
-
-`}`
-
-``
-
-`// need blank line after blocks`
-
-`for (var i = 0; i < 2; i++) {`
-
-`    if (true) {`
-
-`        return false;`
-
-`    }`
-
-``
-
-`    continue;`
-
-`}`
-
-``
-
-`var obj = {`
-
-`    foo: function() {`
-
-`        return 1;`
-
-`    },`
-
-``
-
-`    bar: function() {`
-
-`        return 2;`
-
-`    }`
+`    , c: 2`
 
 `};`
 
 ``
 
-`// not need blank line when in argument list, array, object`
+`x = y`
 
-`func(`
-
-`    2,`
-
-`    function() {`
-
-`        a++;`
-
-`    },`
-
-`    3`
-
-`);`
+`    ? 1 : 2;`
 
 ``
 
-`var foo = [`
+`// good`
 
-`    2,`
+`var a = {`
 
-`    function() {`
+`    b: 1,`
 
-`        a++;`
+`    c: 2`
 
-`    },`
-
-`    3`
-
-`];`
+`};`
 
 ``
 
-`var foo = {`
+`x = y ? 1 : 2;`
 
-`    a: 2,`
+`x = y ?`
 
-`    b: function() {`
+`    1 : 2;`
 
-`        a++;`
+``
 
-`    },`
+`// no need line break with 'else', 'catch', 'finally'`
 
-`    c: 3`
+`if (condition) {`
 
-`};`
+`    ...`
 
+`} else {`
 
+`    ...`
 
----
+`}`
 
+``
 
+`try {`
+
+`    ...`
+
+`} catch (e) {`
+
+`    ...`
+
+`} finally {`
+
+`    ...`
+
+`}`
+
+``
+
+`// not good`
+
+`function test()`
+
+`{`
+
+`    ...`
+
+`}`
+
+``
+
+`// good`
+
+`function test() {`
+
+`    ...`
+
+`}`
+
+``
+
+`// not good`
+
+`var a, foo = 7, b,`
+
+`    c, bar = 8;`
+
+``
+
+`// good`
+
+`var a,`
+
+`    foo = 7,`
+
+`    b, c, bar = 8;`
 
