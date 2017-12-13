@@ -268,16 +268,16 @@ if (x < y) {
 * continue
 * do-while
 
-**例如**
-
 ```js
 /* var declaration */
 var x = 1;
+
 /* expression statement */
 x++;
+
 /* do-while */
 do {
-x++;
+    x++;
 } while (x < 10);
 ```
 
@@ -314,41 +314,52 @@ x++;
 ```js
 // not good
 var a = {
-b :1
+    b :1
 };
+
 // good
 var a = {
-b: 1
+    b: 1
 };
+
 // not good
 ++ x;
 y ++;
 z = x?1:2;
+
 // good
 ++x;
 y++;
 z = x ? 1 : 2;
+
 // not good
 var a = [ 1, 2 ];
+
 // good
 var a = [1, 2];
+
 // not good
 var a = ( 1+2 )*3;
+
 // good
 var a = (1 + 2) * 3;
+
 // no space before '(', one space before '{', one space between function parameters
 var doSomething = function(a, b, c) {
-// do something
+    // do something
 };
+
 // no space before '('
 doSomething(item);
+
 // not good
 for(i=0;i<6;i++){
-x++;
+    x++;
 }
+
 // good
 for (i = 0; i < 6; i++) {
-x++;
+    x++;
 }
 ```
 
@@ -369,74 +380,64 @@ x++;
 // need blank line after variable declaration
 var x = 1;
 
-
 // not need blank line when variable declaration is last expression in the current block
 if (x >= 1) {
-var y = x + 1;
+    var y = x + 1;
 }
 
-
 var a = 2;
-
 
 // need blank line before line comment
 a++;
 
-
 function b() {
-// not need blank line when comment is first line of block
-return a;
+    // not need blank line when comment is first line of block
+    return a;
 }
-
 
 // need blank line after blocks
 for (var i = 0; i < 2; i++) {
-if (true) {
-return false;
+    if (true) {
+        return false;
+    }
+
+    continue;
 }
-
-
-continue;
-}
-
 
 var obj = {
-foo: function() {
-return 1;
-},
+    foo: function() {
+        return 1;
+    },
 
-
-bar: function() {
-return 2;
-}
+    bar: function() {
+        return 2;
+    }
 };
-
 
 // not need blank line when in argument list, array, object
 func(
-2,
-function() {
-a++;
-},
-3
+    2,
+    function() {
+        a++;
+    },
+    3
 );
 
-
 var foo = [
-2,
-function() {
-a++;
-},
-3
+    2,
+    function() {
+        a++;
+    },
+    3
 ];
 
 
 var foo = {
-a: 2,
-b: function() {
-a++;
-},
-c: 3
+    a: 2,
+    b: function() {
+        a++;
+    },
+    c: 3
 };
 ```
 
