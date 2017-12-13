@@ -1,4 +1,6 @@
-### 缩进
+```
+缩进
+```
 
 使用soft tab（4个空格）。
 
@@ -94,8 +96,7 @@
 
 `}`
 
-`  
-`
+
 
 `/* good */`
 
@@ -103,13 +104,9 @@
 
 `.dialog {`
 
-`  
-`
-
 `}`
 
-`  
-`
+
 
 `/* not good */`
 
@@ -119,8 +116,7 @@
 
 `}`
 
-`  
-`
+
 
 `/* good */`
 
@@ -130,14 +126,82 @@
 
 `}`
 
-`  
-`
+
 
 `/* not good */`
 
 `.element{`
 
 `...`
+
+`}`
+
+
+
+`/* good */`
+
+`.element {`
+
+`...`
+
+`}`
+
+
+
+`/* not good */`
+
+`@if{`
+
+`...`
+
+`}@else{`
+
+`...`
+
+`}`
+
+
+
+`/* good */`
+
+`@if {`
+
+`...`
+
+`} @else {`
+
+`...`
+
+`}`
+
+### 空行
+
+以下几种情况需要空行：
+
+* 文件最后保留一个空行
+* '}'后最好跟一个空行，包括scss中嵌套的规则
+* 属性之间需要适当的空行，具体见
+  [属性声明顺序](http://alloyteam.github.io/CodeGuide/#css-declaration-order)
+
+**例如**
+
+`/* not good */`
+
+`.element {`
+
+`...`
+
+`}`
+
+`.dialog {`
+
+`color: red;`
+
+`&:after {`
+
+`...`
+
+`}`
 
 `}`
 
@@ -155,93 +219,20 @@
 `  
 `
 
-`/* not good */`
+`.dialog {`
 
-`@if{`
-
-`...`
-
-`}@else{`
-
-`...`
-
-`}`
+`color: red;`
 
 `  
 `
 
-`/* good */`
-
-`@if {`
-
-`...`
-
-`} @else {`
+`&:after {`
 
 `...`
 
 `}`
 
-
-
-### 空行
-
-以下几种情况需要空行：
-
-* 文件最后保留一个空行
-* '}'后最好跟一个空行，包括scss中嵌套的规则
-* 属性之间需要适当的空行，具体见
-  [属性声明顺序](http://alloyteam.github.io/CodeGuide/#css-declaration-order)
-
-**例如**
-
-`/* not good */`
-
-`.element {`
-
-`    ...`
-
-`}`
-
-`.dialog {`
-
-`    color: red;`
-
-`    &:after {`
-
-`        ...`
-
-`    }`
-
-`}`
-
-``
-
-`/* good */`
-
-`.element {`
-
-`    ...`
-
-`}`
-
-``
-
-`.dialog {`
-
-`    color: red;`
-
-``
-
-`    &:after {`
-
-`        ...`
-
-`    }`
-
 `}`
-
-
 
 ### 换行
 
@@ -257,45 +248,43 @@
 
 **例如**
 
-/\* not good \*/
+`/* not good */`
 
-.element
+`.element`
 
-{color: red; background-color: black;}
+`{color: red; background-color: black;}`
 
+`/* good */`
 
+`.element {`
 
-/\* good \*/
+```
+color: red;
 
-.element {
+background-color: black;
+```
 
-    color: red;
+`}`
 
-    background-color: black;
+`/* not good */`
 
-}
+`.element, .dialog {`
 
+```
+...
+```
 
+`}`
 
-/\* not good \*/
+`/* good */`
 
-.element, .dialog {
+`.element,`
 
-    ...
+`.dialog {`
 
-}
+```
+...
+```
 
-
-
-/\* good \*/
-
-.element,
-
-.dialog {
-
-    ...
-
-}
-
-
+`}`
 
