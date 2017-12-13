@@ -231,14 +231,6 @@ if (typeof person === 'undefined') {
 
 ---
 
-### 
-
-### 
-
-### 
-
-### 
-
 ### 缩进
 
 使用 soft tab（4个空格）。
@@ -652,8 +644,6 @@ debugger不要出现在提交的代码里；
 
 不要像这样使用构造函数，例：`new function () { ... }`,`new Object`；
 
-
-
 ```js
 // not good
 if (a == 1) {
@@ -758,8 +748,6 @@ var singleton = new function() {
 switch的falling through和no default的情况一定要有注释特别说明；
 
 不允许有空的代码块。
-
-
 
 ```js
 // not good
