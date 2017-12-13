@@ -443,7 +443,28 @@
 
 `b, c, bar = 8;`
 
-
-
 ---
+
+### 单行注释
+
+双斜线后，必须跟一个空格；
+
+缩进与下一行代码保持一致；
+
+可位于一个代码行的末尾，与代码间隔一个空格。
+
+**例如**
+
+
+
+```js
+if (condition) {
+    // if you made it here, then all security checks passed
+    allowed();
+}
+
+var zhangsan = 'zhangsan'; // one space after code
+```
+
+
 
