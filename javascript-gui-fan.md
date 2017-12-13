@@ -159,8 +159,6 @@ var a = {
 
 下列关键字后必须有大括号（即使代码块的内容只有一行）：`if`,`else`,`for`,`while`,`do`,`switch`,`try`,`catch`,`finally`,`with`。
 
-
-
 ```
 // not good
 if (condition)
@@ -172,9 +170,68 @@ if (condition) {
 }
 ```
 
+---
+
+### null
+
+适用场景：
+
+* 初始化一个将来可能被赋值为对象的变量
+* 与已经初始化的变量做比较
+* 作为一个参数为对象的函数的调用传参
+* 作为一个返回对象的函数的返回值
+
+不适用场景：
+
+* 不要用null来判断函数调用时有无传参
+* 不要与未初始化的变量做比较
+
+```
+// not good
+function test(a, b) {
+    if (b === null) {
+        // not mean b is not supply
+        ...
+    }
+}
+
+var a;
+
+if (a === null) {
+    ...
+}
+
+// good
+var a = null;
+
+if (a === null) {
+    ...
+}
+```
+
+---
+
+### undefined
+
+永远不要直接使用undefined进行变量判断；
+
+使用typeof和字符串'undefined'对变量进行判断。
+
+
+
+
+
 
 
 ---
+
+### 
+
+### 
+
+### 
+
+### 
 
 ### 缩进
 
