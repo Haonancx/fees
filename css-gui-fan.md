@@ -191,8 +191,6 @@
 
 `}`
 
-
-
 `/* good */`
 
 `.element {`
@@ -201,13 +199,9 @@
 
 `}`
 
-
-
 `.dialog {`
 
 `color: red;`
-
-
 
 `&:after {`
 
@@ -271,8 +265,6 @@ background-color: black;
 
 `}`
 
-
-
 ### 注释
 
 注释统一用'/\* \*/'（scss中也不要用'//'），具体参照右边的写法；
@@ -281,41 +273,69 @@ background-color: black;
 
 可位于一个代码行的末尾，与代码间隔一个空格。
 
+**例如**
 
+`/* Modal header */`
+
+`.modal-header {`
+
+`...`
+
+`}`
+
+`  
+`
+
+`/*`
+
+`* Modal header`
+
+`*/`
+
+`.modal-header {`
+
+`...`
+
+`}`
+
+`  
+`
+
+`.modal-header {`
+
+`/* 50px */`
+
+`width: 50px;`
+
+`color: red; /* color red */`
+
+`}`
+
+
+
+### 引号
+
+最外层统一使用双引号；
+
+url的内容要用引号；
+
+属性选择器中的属性值需要引号。
 
 **例如**
 
-`/* Modal header */`
+`.element:after {`
 
-`.modal-header {`
+`    content: "";`
 
-`    ...`
-
-`}`
-
-``
-
-`/*`
-
-` * Modal header`
-
-` */`
-
-`.modal-header {`
-
-`    ...`
+`    background-image: url("logo.png");`
 
 `}`
 
 ``
 
-`.modal-header {`
+`li[data-type="single"] {`
 
-`    /* 50px */`
-
-`    width: 50px;`
-
-`    color: red; /* color red */`
+`    ...`
 
 `}`
 
