@@ -125,8 +125,6 @@
 
 `<link rel="stylesheet" href="code_guide.css">`
 
-
-
 `<!-- In-document CSS -->`
 
 `<style>`
@@ -135,13 +133,9 @@
 
 `</style>`
 
-
-
 `<!-- External JS -->`
 
 `<script src="code_guide.js"></script>`
-
-
 
 `<!-- In-document JS -->`
 
@@ -150,10 +144,6 @@
 `...`
 
 `</script>`
-
-
-
-
 
 ### 属性顺序
 
@@ -172,19 +162,37 @@ class是为高可复用组件设计的，所以应处在第一位；
 
 id更加具体且应该尽量少使用，所以将它放在第二位。
 
-
-
 ##### **例如**
 
+`<a class="..." id="..." data-modal="toggle" href="#">Example link</a>`
 
-
-`<a class="..." id="..." data-modal="toggle" href="#">Example link</a>`
-
-`<input class="form-control" type="text">`
+`<input class="form-control" type="text">`
 
 `<img src="..." alt="...">`
 
 
+
+
+
+### boolean属性
+
+boolean属性指不需要声明取值的属性，XHTML需要每个属性声明取值，但是HTML5并不需要；
+
+更多内容可以参考[WhatWG section on boolean attributes](http://www.whatwg.org/specs/web-apps/current-work/multipage/common-microsyntaxes.html#boolean-attributes)：
+
+> boolean属性的存在表示取值为true，不存在则表示取值为false。
+
+##### **例如**
+
+&lt;input type="text" disabled&gt;
+
+&lt;input type="checkbox" value="1" checked&gt;
+
+&lt;select&gt;
+
+    &lt;option value="1" selected&gt;1&lt;/option&gt;
+
+&lt;/select&gt;
 
 
 
