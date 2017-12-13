@@ -170,10 +170,6 @@ id更加具体且应该尽量少使用，所以将它放在第二位。
 
 `<img src="..." alt="...">`
 
-
-
-
-
 ### boolean属性
 
 boolean属性指不需要声明取值的属性，XHTML需要每个属性声明取值，但是HTML5并不需要；
@@ -190,11 +186,15 @@ boolean属性指不需要声明取值的属性，XHTML需要每个属性声明�
 
 &lt;select&gt;
 
-    &lt;option value="1" selected&gt;1&lt;/option&gt;
+```
+&lt;option value="1" selected&gt;1&lt;/option&gt;
+```
 
 &lt;/select&gt;
 
 
 
+### JS生成标签
 
+在JS文件中生成标签让内容变得更难查找，更难编辑，性能更差。应该尽量避免这种情况的出现。
 
