@@ -202,17 +202,27 @@ boolean属性指不需要声明取值的属性，XHTML需要每个属性声明�
 
 ##### **例如**
 
-`<!-- Not well -->`
+`<!-- Not well -->`
 
-`<span class="avatar">`
+`<span class="avatar">`
 
-`    <img src="...">`
+`<img src="...">`
 
-`</span>`
+`</span>`
 
-``
 
-`<!-- Better -->`
+
+`<!-- Better -->`
 
 `<img class="avatar" src="...">`
+
+
+
+### 实用高于完美
+
+
+
+尽量遵循HTML标准和语义，但是不应该以浪费实用性作为代价；
+
+任何时候都要用尽量小的复杂度和尽量少的标签来解决问题。
 
