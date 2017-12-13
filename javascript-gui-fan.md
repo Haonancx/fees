@@ -235,8 +235,6 @@ if (typeof person === 'undefined') {
 
 使用 soft tab（4个空格）。
 
-**例如**
-
 ```js
 var x = 1,
     y = 1;
@@ -309,8 +307,6 @@ do {
 * 无论是函数声明还是函数表达式，'{'前一定要有空格
 * 函数的参数之间
 
-**例如**
-
 ```js
 // not good
 var a = {
@@ -373,8 +369,6 @@ for (i = 0; i < 6; i++) {
 * 注释前（当注释在代码块的第一行时，则无需空行）
 * 代码块后（在函数调用、数组、对象中则无需空行）
 * 文件最后保留一个空行
-
-**例如**
 
 ```js
 // need blank line after variable declaration
@@ -457,71 +451,60 @@ var foo = {
 * 代码块'{'后和'}'前
 * 变量赋值后
 
-**例如**
-
 ```js
 // not good
 var a = {
-b: 1
-, c: 2
+    b: 1
+    , c: 2
 };
 
-
 x = y
-? 1 : 2;
-
+    ? 1 : 2;
 
 // good
 var a = {
-b: 1,
-c: 2
+    b: 1,
+    c: 2
 };
-
 
 x = y ? 1 : 2;
 x = y ?
-1 : 2;
-
+    1 : 2;
 
 // no need line break with 'else', 'catch', 'finally'
 if (condition) {
-...
+    ...
 } else {
-...
+    ...
 }
-
 
 try {
-...
+    ...
 } catch (e) {
-...
+    ...
 } finally {
-...
+    ...
 }
-
 
 // not good
 function test()
 {
-...
+    ...
 }
-
 
 // good
 function test() {
-...
+    ...
 }
-
 
 // not good
 var a, foo = 7, b,
-c, bar = 8;
-
+    c, bar = 8;
 
 // good
 var a,
-foo = 7,
-b, c, bar = 8;
+    foo = 7,
+    b, c, bar = 8;
 ```
 
 ---
@@ -533,8 +516,6 @@ b, c, bar = 8;
 缩进与下一行代码保持一致；
 
 可位于一个代码行的末尾，与代码间隔一个空格。
-
-**例如**
 
 ```js
 if (condition) {
