@@ -36,7 +36,7 @@ var body = $('body');
 var $body = $('body');
 ```
 
-
+---
 
 ### 缩进
 
@@ -408,8 +408,6 @@ function foo(a, b, c, d, g, j) {
 
 最外层统一使用单引号。
 
-
-
 ```js
 // not good
 var x = "test";
@@ -418,10 +416,6 @@ var x = "test";
 var y = 'foo',
     z = '<div id="test"></div>';
 ```
-
-
-
-
 
 
 
