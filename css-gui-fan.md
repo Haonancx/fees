@@ -1,7 +1,5 @@
 # CSS 规范
 
-
-
 ### 命名
 
 * 类名使用小写字母，以中划线分隔
@@ -198,7 +196,7 @@
 * 属性之间需要适当的空行，具体见
   [属性声明顺序](http://alloyteam.github.io/CodeGuide/#css-declaration-order)
 
-```
+```css
 /* not good */
 .element {
     ...
