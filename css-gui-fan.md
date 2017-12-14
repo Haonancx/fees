@@ -6,8 +6,6 @@
 * id采用驼峰式命名
 * scss中的变量、函数、混合、placeholder采用驼峰式命名
 
-
-
 ```css
 .element {
     position: absolute;
@@ -78,23 +76,19 @@
 
 使用soft tab（4个空格）。
 
-**例如**
 
-`.element {`
 
-`position: absolute;`
+```css
+.element {
+    position: absolute;
+    top: 10px;
+    left: 10px;
 
-`top: 10px;`
-
-`left: 10px;`
-
-`border-radius: 10px;`
-
-`width: 50px;`
-
-`height: 50px;`
-
-`}`
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+}
+```
 
 ---
 
@@ -102,17 +96,16 @@
 
 每个属性声明末尾都要加分号。
 
-**例如**
 
-`.element {`
 
-`width: 20px;`
+```css
+.element {
+    width: 20px;
+    height: 20px;
 
-`height: 20px;`
-
-`background-color: red;`
-
-`}`
+    background-color: red;
+}
+```
 
 ---
 
@@ -136,107 +129,67 @@
 * 属性值中的','后
 * 注释'/\*'后和'\*/'前
 
-**例如**
+```css
+/* not good */
+.element {
+    color :red! important;
+    background-color: rgba(0,0,0,.5);
+}
 
-`/* not good */`
+/* good */
+.element {
+    color: red !important;
+    background-color: rgba(0, 0, 0, .5);
+}
 
-`.element {`
+/* not good */
+.element ,
+.dialog{
+    ...
+}
 
-`color :red! important;`
+/* good */
+.element,
+.dialog {
 
-`background-color: rgba(0,0,0,.5);`
+}
 
-`}`
+/* not good */
+.element>.dialog{
+    ...
+}
 
-`  
-`
+/* good */
+.element > .dialog{
+    ...
+}
 
-`/* good */`
+/* not good */
+.element{
+    ...
+}
 
-`.element {`
+/* good */
+.element {
+    ...
+}
 
-`color: red !important;`
+/* not good */
+@if{
+    ...
+}@else{
+    ...
+}
 
-`background-color: rgba(0, 0, 0, .5);`
+/* good */
+@if {
+    ...
+} @else {
+    ...
+}
+```
 
-`}`
 
-`  
-`
-
-`/* not good */`
-
-`.element ,`
-
-`.dialog{`
-
-`...`
-
-`}`
-
-`/* good */`
-
-`.element,`
-
-`.dialog {`
-
-`}`
-
-`/* not good */`
-
-`.element>.dialog{`
-
-`...`
-
-`}`
-
-`/* good */`
-
-`.element > .dialog{`
-
-`...`
-
-`}`
-
-`/* not good */`
-
-`.element{`
-
-`...`
-
-`}`
-
-`/* good */`
-
-`.element {`
-
-`...`
-
-`}`
-
-`/* not good */`
-
-`@if{`
-
-`...`
-
-`}@else{`
-
-`...`
-
-`}`
-
-`/* good */`
-
-`@if {`
-
-`...`
-
-`} @else {`
-
-`...`
-
-`}`
 
 ---
 
@@ -249,47 +202,31 @@
 * 属性之间需要适当的空行，具体见
   [属性声明顺序](http://alloyteam.github.io/CodeGuide/#css-declaration-order)
 
-**例如**
+```
+/* not good */
+.element {
+    ...
+}
+.dialog {
+    color: red;
+    &:after {
+        ...
+    }
+}
 
-`/* not good */`
+/* good */
+.element {
+    ...
+}
 
-`.element {`
+.dialog {
+    color: red;
 
-`...`
-
-`}`
-
-`.dialog {`
-
-`color: red;`
-
-`&:after {`
-
-`...`
-
-`}`
-
-`}`
-
-`/* good */`
-
-`.element {`
-
-`...`
-
-`}`
-
-`.dialog {`
-
-`color: red;`
-
-`&:after {`
-
-`...`
-
-`}`
-
-`}`
+    &:after {
+        ...
+    }
+}
+```
 
 ---
 
@@ -305,47 +242,30 @@
 * 每个属性独占一行
 * 多个规则的分隔符','后
 
-**例如**
 
-`/* not good */`
 
-`.element`
+```css
+/* not good */
+.element
+{color: red; background-color: black;}
 
-`{color: red; background-color: black;}`
+/* good */
+.element {
+    color: red;
+    background-color: black;
+}
 
-`/* good */`
+/* not good */
+.element, .dialog {
+    ...
+}
 
-`.element {`
-
+/* good */
+.element,
+.dialog {
+    ...
+}
 ```
-color: red;
-
-background-color: black;
-```
-
-`}`
-
-`/* not good */`
-
-`.element, .dialog {`
-
-```
-...
-```
-
-`}`
-
-`/* good */`
-
-`.element,`
-
-`.dialog {`
-
-```
-...
-```
-
-`}`
 
 ---
 
