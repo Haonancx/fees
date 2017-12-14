@@ -1,5 +1,7 @@
 # 命名规则
 
+
+
 ### 项目命名
 
 全部采用小写方式， 以下划线分隔。
@@ -18,11 +20,11 @@
 
 ---
 
-### JS 文件命名
+### HTML 文件命名
 
 参照项目命名规则。
 
-例：account\_model.js
+例：error\_report.html
 
 ---
 
@@ -34,9 +36,9 @@
 
 ---
 
-### HTML 文件命名
+### JS 文件命名
 
 参照项目命名规则。
 
-例：error\_report.html
+例：account\_model.js
 
