@@ -52,7 +52,7 @@
 
 有复数结构时，要采用复数命名法。
 
-例：forms.scss 或者 hack\_ie.css
+例：forms.scss 或者 tabs.css
 
 ---
 
