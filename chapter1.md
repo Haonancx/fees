@@ -24,11 +24,11 @@
 
 全部采用小写方式， 以下划线分隔。
 
-css, test, build, src
+例：css, test, build, src
 
 有复数结构时，要采用复数命名法。
 
-例：scripts,fonts, styles, images, data\_models
+例：scripts,fonts, styles, images, directives, data\_models
 
 ---
 
