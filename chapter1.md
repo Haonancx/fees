@@ -16,7 +16,11 @@
 
 全部采用小写方式， 以下划线分隔。
 
-例：my\_project\_name
+例：
+
+* react\_example\(react案例\)
+* front\_end\_monitoring\_platform \( 前端监控平台\)
+* big\_data\_analysis\_platform\(大数据分析平台\)
 
 ---
 
