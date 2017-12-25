@@ -48,11 +48,11 @@
 
 全部采用小写方式， 以下划线分隔。
 
-例：retina\_sprites.scss 或者 retina\_sprites.css
+例：retina\_sprites.scss 或者 hack\_ie.css
 
 有复数结构时，要采用复数命名法。
 
-
+例：forms.scss 或者 hack\_ie.css
 
 ---
 
@@ -65,4 +65,6 @@
 有复数结构时，要采用复数命名法。
 
 例：charts.js
+
+**注：**类 js文件，如 typescript ，命名规则同上。
 
