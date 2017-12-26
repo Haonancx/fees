@@ -14,3 +14,19 @@
 
 
 
+---
+
+##### 欢迎交流与反馈
+
+
+
+邮箱：fsux@outlook.com
+
+[https://github.com/Haonancx/fees/issues](https://github.com/Haonancx/fees/issues "Github Issues")
+
+[https://www.gitbook.com/book/haonancx/fees/discussions ](https://www.gitbook.com/book/haonancx/fees/discussions  "gitbook discussions ")
+
+
+
+
+
