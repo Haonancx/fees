@@ -2,7 +2,7 @@
 
 ![](/assets/fees_2018.jpg)
 
-作者：FSUX，由 [http://fsux.me](http://fsux.me "FSUX") 倾情赞助。
+作者：无笙，由 [http://fsux.me](http://fsux.me "FSUX") 倾情赞助。
 
 《前端工程规范》是一本关于的 前端工程化规范教程，全面介绍前端领域在开发与维护中的工程化规范。
 
